@@ -1,0 +1,20 @@
+---
+title: "Contact"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Lecturer: 
+
+Stephan Peischl <stephan.peischl@bioinformatics.unibe.ch>
+
+
+TAs:
+
+Maria Cuenca <Maria.Cuenca@eawag.ch>
+Johanna Ten Brink  <Johanna.TenBrink@eawag.ch>
+Antoine Moinet <antoine.moinet@iee.unibe.ch> 
+Rémi Matthey-Doret <remi.b.md@gmail.com>

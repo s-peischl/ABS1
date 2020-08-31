@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on A Hugo website</title>
+    <link>/ABS1/categories/introduction/</link>
+    <description>Recent content in Introduction on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/ABS1/categories/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome</title>
+      <link>/ABS1/2020/08/31/welcome/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/2020/08/31/welcome/</guid>
+      <description>Welcome to the webpage for the course Applied Biostatistics 1. Due to current developments we are offering this course as online only. The reason for this decision is simply that this will allow us to offer high quality lectures for everyone in a unified system. A mixture of live lectures and online podcasts would be complicated to organize (we would need to limit and track the students who attend the lectures, record the lectures and exercises sessions, eventually switch the whole system in case there is a confirmed Covid19 case in our lecture, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

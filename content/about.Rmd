@@ -1,0 +1,13 @@
+---
+date: "2016-05-05T21:48:51-07:00"
+title: About
+---
+
+
+This is the webpage for the course Applied Biostatistics I.
+
+Zoom links, course material, exercise lists and other useful material can be found on ilias. 
+
+Important: everybody must sign up on ilias for this course.
+
+

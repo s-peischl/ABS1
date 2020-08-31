@@ -1,0 +1,18 @@
+---
+title: Exercises
+author: SP
+date: '2020-08-31'
+slug: the-exercise-sessions
+categories:
+  - Exercises
+tags:
+  - General Information
+---
+
+The exercises will be held on Thursday morning for the Bioinformatics Master Students and Friday morning for the Ecology and Evolution master students. In principle, students can choose freely which session they want to addend, but this needs to be decided in the first week of the semester! 
+
+You will get an exercise series with a list of (mostly) applied problems. The teaching assistants will schedule presentations of the exercises in the first exercise session. Every week 2-4 of the exercises will be presented by students in teams of up to 4 students (depending on complexity of exercise). You will also be asked to indicate which exercises you solved at home. The teaching assistant may check this by asking students who indicated that they solved a problem to present their solution briefly. The presentations and how many of the exercises you solved at home will determine your grade. The grade of the exercises will count to 20% for your final grade. 
+
+
+The exercise list, exercise schedule and other information can be found on ilias: 
+https://ilias.unibe.ch/goto_ilias3_unibe_crs_1793180.html

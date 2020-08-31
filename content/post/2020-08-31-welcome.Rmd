@@ -1,0 +1,19 @@
+---
+title: Welcome
+author: SP
+date: '2020-08-31'
+slug: welcome
+categories:
+  - Introduction
+tags:
+  - General Information
+---
+
+Welcome to the webpage for the course Applied Biostatistics 1. Due to current developments we are offering this course as online only. The reason for this decision is simply that this will allow us to offer high quality lectures for everyone in a unified system. A mixture of live lectures and online podcasts would be complicated to organize (we would need to limit and track the students who attend the lectures, record the lectures and exercises sessions, eventually switch the whole system in case there is a confirmed Covid19 case in our lecture, etc.). A simple and unified online solution seems much more attractive to us as lectures, and we hope to you as students as well. 
+
+We will live broadcast all lectures via Zoom and hope that you will all participate - last semester has shown us that we can have very interesting interactions and discussions via Zoom. So please show up and do not hesitate to interrupt the lecture if you have questions. We all profit from interaction. Likewise, the exercise part will be held via Zoom and students will present their solutions via sharing their screen with the other students. Teaching material such as slides and exercises,can be found on ilias - please make sure to sign up for the course as soon as possible! Links to the Zoom sessions, passwords to access the lectures and recordings of the exercises and lectures will also be available via ilias. 
+
+On this webpage we will post solutions from students, additional notes to the online lecture and other announcements. It is not necessary to follow this webpage - all crucial information will be distributed via ilias - this webpage sole purpose is to provide additional information that we find helpful. 
+
+
+

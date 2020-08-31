@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on A Hugo website</title>
+    <link>/ABS1/categories/</link>
+    <description>Recent content in Categories on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/ABS1/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exercises</title>
+      <link>/ABS1/categories/exercises/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/categories/exercises/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>/ABS1/categories/introduction/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/categories/introduction/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
