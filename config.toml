@@ -1,7 +1,7 @@
 baseURL = "https://s-peischl.github.io/ABS1/"
 publishDir = "docs"
 languageCode = "en-us"
-title = "A Hugo website"
+title = "Applied Biostatistics I"
 theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = ""
