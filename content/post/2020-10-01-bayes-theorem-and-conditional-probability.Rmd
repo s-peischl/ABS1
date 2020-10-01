@@ -8,7 +8,7 @@ tags: []
 ---
 
 
-Consider a medical test for a rare disease.  The test quite accurate: it detects the disease with 95% probability (sensitivity of the test), and indicates the absence of the disease with 90% probability ( specificity of the test).
+Consider a medical test for a rare disease.  The test is quite accurate: it detects the disease with 95% probability (sensitivity of the test), and indicates the absence of the disease with 90% probability ( specificity of the test).
 
 Notation: 
 
