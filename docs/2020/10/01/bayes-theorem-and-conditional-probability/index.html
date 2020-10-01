@@ -77,7 +77,7 @@
       
 
 
-<p>Consider a medical test for a rare disease. The test quite accurate: it detects the disease with 95% probability ( sensitivity of the test), and indicates the absence of the disease with 90% probability ( specificity of the test).</p>
+<p>Consider a medical test for a rare disease. The test quite accurate: it detects the disease with 95% probability (sensitivity of the test), and indicates the absence of the disease with 90% probability ( specificity of the test).</p>
 <p>Notation:</p>
 <ul>
 <li>event <strong>D</strong>: person has the disease;</li>
@@ -130,8 +130,29 @@ dat = data.frame(pT = pD,pDgivenT = pDgivenT)
 
 ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   geom_line() +
-  theme_classic()</code></pre>
+  theme_classic() +
+  xlab(&quot;P[D]&quot;) + 
+  ylab(&quot;P[D|T]&quot;)</code></pre>
 <p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>We see that the test’s false positive probability strongly depends on the prevalence. The rarer the disease is, the less reliable the test is in informing you whether you actually have the disease. The specificity also has a strong impact on the interpretation of the test. For instance, for the current Covid-19 PCR tests specificity seems to be closer to 99% than to 90%, then we would get the following:</p>
+<pre class="r"><code>pD = seq(0,1,by=0.001)
+pTgivenD = 0.95
+pTgiven_notD = 0.01
+
+# law of total probability:
+pT =  pTgivenD * pD + pTgiven_notD*(1-pD)
+
+#Bayes Theorem:
+pDgivenT = pTgivenD*pD/pT
+
+dat = data.frame(pT = pD,pDgivenT = pDgivenT)
+
+ggplot(dat,aes(x  = pD,y = pDgivenT)) +
+  geom_line() +
+  theme_classic()+
+  xlab(&quot;P[D]&quot;) + 
+  ylab(&quot;P[D|T]&quot;)</code></pre>
+<p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 
     </div>
   </article>
