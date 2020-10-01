@@ -6,10 +6,17 @@
     <description>Recent content in Posts on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/ABS1/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bayes Theorem and Conditional Probability</title>
+      <link>/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</guid>
+      <description>Consider a medical test for a rare disease. The test quite accurate: it detects the disease with 95% probability ( sensitivity of the test), and indicates the absence of the disease with 90% probability ( specificity of the test).
+Notation:
+ event D: person has the disease; event T: test is positive (i.e., indicates disease)  We assume that the disease has incidence of 1 %: P[D] = 0.01.</description>
+    </item>
     
     <item>
       <title>Exercises</title>

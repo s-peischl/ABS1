@@ -6,11 +6,7 @@
     <description>Recent content in Exercises on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/ABS1/categories/exercises/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/categories/exercises/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exercises</title>
       <link>/ABS1/2020/08/31/the-exercise-sessions/</link>
