@@ -43,7 +43,7 @@
          height="50"
          alt="Logo">
   </a>
-
+<p style="font-size:30px"> Applied Biostatistics I HS 2020
   <ul class="nav-links">
     
     <li><a href="/ABS1/about/">About</a></li>
@@ -55,6 +55,8 @@
     <li><a href="https://twitter.com/StephanPeischl">Twitter</a></li>
     
   </ul>
+  
+
 </nav>
 
       </header>
@@ -64,7 +66,7 @@
 
   <article class="article">
     
-    <span class="article-duration">3 min read</span>
+    <span class="article-duration">4 min read</span>
     
 
     <h1 class="article-title">Bayes Theorem and Conditional Probability</h1>
@@ -132,7 +134,8 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   geom_line() +
   theme_classic() +
   xlab(&quot;P[D]&quot;) + 
-  ylab(&quot;P[D|T]&quot;)</code></pre>
+  ylab(&quot;P[D|T]&quot;) + 
+  theme(text = element_text(size = 20))  </code></pre>
 <p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-1-1.png" width="75%" /></p>
 <p>We see that the test’s false positive probability strongly depends on the prevalence. The rarer the disease is, the less reliable the test is in informing you whether you actually have the disease. The specificity also has a strong impact on the interpretation of the test. For instance, for the current Covid-19 PCR tests specificity seems to be closer to 99% than to 90%, then we would get the following:</p>
 <pre class="r"><code>pD = seq(0,1,by=0.001)
@@ -151,7 +154,8 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   geom_line() +
   theme_classic()+
   xlab(&quot;P[D]&quot;) + 
-  ylab(&quot;P[D|T]&quot;)</code></pre>
+  ylab(&quot;P[D|T]&quot;) + 
+  theme(text = element_text(size = 20)) </code></pre>
 <p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-2-1.png" width="75%" /></p>
 
     </div>

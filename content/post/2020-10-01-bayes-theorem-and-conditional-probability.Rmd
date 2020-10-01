@@ -85,7 +85,8 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   geom_line() +
   theme_classic() +
   xlab("P[D]") + 
-  ylab("P[D|T]")
+  ylab("P[D|T]") + 
+  theme(text = element_text(size = 20))  
 
 
 ```
@@ -111,7 +112,8 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   geom_line() +
   theme_classic()+
   xlab("P[D]") + 
-  ylab("P[D|T]")
+  ylab("P[D|T]") + 
+  theme(text = element_text(size = 20)) 
 
 
 ```

@@ -5,10 +5,12 @@
          height="{{ .Site.Params.logo.height }}"
          alt="{{ .Site.Params.logo.alt }}">
   </a>
-
+<p style="font-size:30px"> Applied Biostatistics I HS 2020
   <ul class="nav-links">
     {{ range .Site.Menus.main }}
     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
     {{ end }}
   </ul>
+  
+
 </nav>
