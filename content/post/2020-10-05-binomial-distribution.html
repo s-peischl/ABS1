@@ -1,0 +1,71 @@
+---
+title: "Binomial Distribution"
+author: "SP"
+date: '2020-10-05'
+slug: binomial-distribution
+categories: Probability Theory
+tags:
+- Distributions
+- Probability Theory
+---
+
+
+
+<p>We introduce the binomial distribution with a simple example: imagine you have a coin with two sides: Heads and Tails. We don’t know if the coin is fair, but we can try to do an experiment to see if it s fair. We flip it many times and if it is a fair coin, we should see the same number of Heads and Tails. Let’s say we have flipped it 10 times and got the following sequence: s = {H,T,T,T,H,H,T,H,T,T}. What is the probability for this particular outcome if it is a fair coin? Since all coin tosses are independent, we get:</p>
+<p><span class="math display">\[
+P(Sequence = s) = (1/2)^{10}. 
+\]</span>
+W observe that each outcome would be equally likely, because the probability for Heads or Tails are the same: <span class="math inline">\(1/2\)</span>. Clearly this is not very helpful. So let us try something else: we count the number of Heads (calling it a success - the choice that Heads is a success is arbitrary and doesn’t matter). In our example the number of heads is</p>
+<p><span class="math display">\[H = 4.\]</span></p>
+<p>What is the probability for observing for Heads in 10 coin flips? This muse be something different than the probability calculate above for one specific sequence, because there are many ways to get four Heads. For instance {H,H,H,H,T,T,T,T,T,T} has four heads, and so does {H,T,H,T,H,T,H,T,T,T}. Both of these outcomes are equally likely and both of them yield four heads.</p>
+<p>A next question that naturally arises is whether the probabilities for H = 0, H = 1, etc. are different from each other. Intuitvely one would think so. Let us try to calculate this:</p>
+<ul>
+<li>H = 0</li>
+</ul>
+<p>There is only one way to get this outcome, so the probability for this sequence of all Tails is equal to the probability for H = 0:</p>
+<p><span class="math display">\[P(H = 0) = (1/2)^{10}.\]</span></p>
+<ul>
+<li>H = 1</li>
+</ul>
+<p>For H = 1, there are 10 possible sequences; the first coin toss is H but all other T, or the second one is H and all other T, or the third one H and all other T, and so on. Thus the probability for H = 1 is
+<span class="math display">\[P(H = 1) = 10*(1/2)^{10},\]</span>
+because these sequences correspond to disjoint events and we can simply add them up.</p>
+<ul>
+<li>H = k, where k = 0, …, n</li>
+</ul>
+<p>From now on it gets more complex and we do not need to go through all cases separately. Instead we use a result from combinatorics to solve the general case. We need to calculate the number of ways how we can choose k elements out of n, where k is the number of H tosses and n is the total number of tosses. This is given by the so called binomial coefficient:</p>
+<p><span class="math display">\[{n\choose k} = \frac{n!}{k!(n-k)!}, \]</span> with
+<span class="math display">\[n! = 1*2*3*...*(n-1)*n.\]</span></p>
+<p>If we now out all this together, we have derived the binomial distribution for the case of <span class="math inline">\(\pi = 1/2\)</span>:</p>
+<p><span class="math display">\[
+P( H = k) = {n\choose k} (1/2)^n
+\]</span></p>
+<p>The last step is to consider the general case where <span class="math inline">\(0 &lt; \pi &lt; 1\)</span>, so that the probability for a success is equal to <span class="math inline">\(\pi\)</span>. Then the probability for any sequence with k successes and n-k failures is:</p>
+<p><span class="math display">\[\pi^k (1-\pi)^{n-k}\]</span></p>
+<p>and since there are <span class="math inline">\({n\choose k}\)</span> such sequences the probability for k successes among n trials is:
+<span class="math display">\[P(H = k) = {n\choose k} \pi^k (1-\pi)^{n-k}\]</span></p>
+<p>In R we can get this distribution very easily in the following way:</p>
+<pre class="r"><code>library(ggplot2)
+# plot the distribution
+
+pi = 0.5
+n = 10
+k = 0:10
+
+bin.dist = dbinom(k,n,pi)
+
+dat = data.frame(k = k,dist = bin.dist)
+
+ggplot(dat,aes(x = k,y= dist)) + 
+  geom_point() +
+  theme_classic() + 
+  theme(text = element_text(size = 20)) </code></pre>
+<p><img src="/ABS1/post/2020-10-05-binomial-distribution_files/figure-html/unnamed-chunk-1-1.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>If we want to draw a random sample from a distribution, we can also do this in R:</p>
+<pre class="r"><code>pi = 0.5
+n = 10
+k = 0:10
+
+random.sample = rbinom(1,n,pi)
+print(random.sample)</code></pre>
+<pre><code>## [1] 6</code></pre>

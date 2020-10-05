@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distributions on Applied Biostatistics I</title>
+    <link>/ABS1/tags/distributions/</link>
+    <description>Recent content in Distributions on Applied Biostatistics I</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/tags/distributions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Binomial Distribution</title>
+      <link>/ABS1/2020/10/05/binomial-distribution/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/2020/10/05/binomial-distribution/</guid>
+      <description>We introduce the binomial distribution with a simple example: imagine you have a coin with two sides: Heads and Tails. We don’t know if the coin is fair, but we can try to do an experiment to see if it s fair. We flip it many times and if it is a fair coin, we should see the same number of Heads and Tails. Let’s say we have flipped it 10 times and got the following sequence: s = {H,T,T,T,H,H,T,H,T,T}.</description>
+    </item>
+    
+  </channel>
+</rss>

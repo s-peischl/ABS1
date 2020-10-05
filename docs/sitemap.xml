@@ -4,22 +4,47 @@
   
   <url>
     <loc>/ABS1/</loc>
-    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/2020/10/05/binomial-distribution/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/categories/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/tags/distributions/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/post/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/tags/probability-theory/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/categories/probability-theory/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/tags/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/ABS1/post/</loc>
-    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/ABS1/categories/</loc>
-    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,11 +64,6 @@
   
   <url>
     <loc>/ABS1/categories/introduction/</loc>
-    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/ABS1/tags/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
