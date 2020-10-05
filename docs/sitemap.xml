@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>/ABS1/tags/paradox/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/ABS1/post/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
@@ -38,7 +43,17 @@
   </url>
   
   <url>
+    <loc>/ABS1/tags/simulation/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/ABS1/tags/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/2020/10/05/the-monty-hall-problem/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   

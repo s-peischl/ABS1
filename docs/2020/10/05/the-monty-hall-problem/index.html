@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.75.1" />
+
+
+<title>The Monty Hall Problem - Applied Biostatistics I</title>
+<meta property="og:title" content="The Monty Hall Problem - Applied Biostatistics I">
+
+
+  <link href='/ABS1/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/ABS1/css/fonts.css" media="all">
+<link rel="stylesheet" href="/ABS1/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/ABS1/" class="nav-logo">
+    <img src="/ABS1/images/logo1.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+<p style="font-size:30px"> Applied Biostatistics I HS 2020
+  <ul class="nav-links">
+    
+    <li><a href="/ABS1/about/">About</a></li>
+    
+    <li><a href="/ABS1/contact/">Contact</a></li>
+    
+    <li><a href="https://ilias.unibe.ch/goto_ilias3_unibe_crs_1793180.html">Ilias</a></li>
+    
+    <li><a href="https://twitter.com/StephanPeischl">Twitter</a></li>
+    
+  </ul>
+  
+
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">The Monty Hall Problem</h1>
+
+    
+    <span class="article-date">2020-10-05</span>
+    
+
+    <div class="article-content">
+      
+
+
+<p>Here is some R code to illustrate the outcomes of the two strategies (staying and switching) discussed in the lecture. You can copy and paste this code to play around with it.</p>
+<pre class="r"><code># number of runs
+n = 100
+all.doors = 1:3
+
+win.stay = numeric(n)
+win.switch = numeric(n)
+
+for (i in 1 : n)
+{
+  # chose a winning door for each time
+  winning.door = sample(all.doors,1)
+  
+  # contest chooses a door 
+  chosen.door = sample(all.doors,1)
+  
+  # game host opens one door, 
+  # the remaining door is the one that the contest can switch to
+  if(winning.door == chosen.door)
+  {
+    # we randomly chosen one door that is not the winning door 
+    # or the chosen door
+    # we open the other one
+    # the player can switch to the remaining door
+    
+    remaining.door = sample(all.doors[-winning.door],1)
+    
+  }
+  
+  else 
+  {
+    # we select the door that is not the winning door
+    # and not the chosen door and open it
+    opened.door = all.doors[-c(winning.door,chosen.door)]
+    
+    # the remaining door is then the one that is not chosen
+    # and not opened
+    remaining.door = all.doors[-c(chosen.door,opened.door)]
+    
+  }
+
+  win.switch[i] = (remaining.door == winning.door)
+  win.stay[i] = (chosen.door == winning.door)
+
+}
+
+
+print(paste(&quot;The strategy &#39;switch&#39; yielded &quot;, sum(win.switch), &quot; wins.&quot;))</code></pre>
+<pre><code>## [1] &quot;The strategy &#39;switch&#39; yielded  72  wins.&quot;</code></pre>
+<pre class="r"><code>print(paste(&quot;The strategy &#39;stay&#39; yielded &quot;, sum(win.stay), &quot; wins.&quot;))</code></pre>
+<pre><code>## [1] &quot;The strategy &#39;stay&#39; yielded  28  wins.&quot;</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/ABS1/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/ABS1/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+
