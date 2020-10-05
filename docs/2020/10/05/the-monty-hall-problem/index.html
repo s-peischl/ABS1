@@ -84,8 +84,12 @@
 n = 100
 all.doors = 1:3
 
+# some variables to keep track of waht is going on
 win.stay = numeric(n)
 win.switch = numeric(n)
+chosen = numeric(n)
+winning = numeric(n)
+openend = numeric(n)
 
 for (i in 1 : n)
 {
@@ -122,14 +126,20 @@ for (i in 1 : n)
 
   win.switch[i] = (remaining.door == winning.door)
   win.stay[i] = (chosen.door == winning.door)
+  
+  # record for visualization
+  chosen[i] = chosen.door
+  winning[i] = winning.door
 
 }
 
 
 print(paste(&quot;The strategy &#39;switch&#39; yielded &quot;, sum(win.switch), &quot; wins.&quot;))</code></pre>
-<pre><code>## [1] &quot;The strategy &#39;switch&#39; yielded  72  wins.&quot;</code></pre>
+<pre><code>## [1] &quot;The strategy &#39;switch&#39; yielded  74  wins.&quot;</code></pre>
 <pre class="r"><code>print(paste(&quot;The strategy &#39;stay&#39; yielded &quot;, sum(win.stay), &quot; wins.&quot;))</code></pre>
-<pre><code>## [1] &quot;The strategy &#39;stay&#39; yielded  28  wins.&quot;</code></pre>
+<pre><code>## [1] &quot;The strategy &#39;stay&#39; yielded  26  wins.&quot;</code></pre>
+<pre class="r"><code>dat = data.frame(switch = win.switch,stay = win.stay,chosen = chosen,winning = winning)</code></pre>
+<p>Note that the sum of switch or stay strategy winning sums to 100. As we have discussed in the lecture, “switch” wins exactly when “stay” doesn’t win. And since staying wins with a probability of 1/3 (choosing the right door out of 3), we can conclude that switching must win with a probability of 2/3. Our simulation confirms this.</p>
 
     </div>
   </article>

@@ -14,7 +14,7 @@
       
       <guid>/ABS1/2020/10/05/the-monty-hall-problem/</guid>
       <description>Here is some R code to illustrate the outcomes of the two strategies (staying and switching) discussed in the lecture. You can copy and paste this code to play around with it.
-# number of runs n = 100 all.doors = 1:3 win.stay = numeric(n) win.switch = numeric(n) for (i in 1 : n) { # chose a winning door for each time winning.door = sample(all.doors,1) # contest chooses a door chosen.</description>
+# number of runs n = 100 all.doors = 1:3 # some variables to keep track of waht is going on win.stay = numeric(n) win.switch = numeric(n) chosen = numeric(n) winning = numeric(n) openend = numeric(n) for (i in 1 : n) { # chose a winning door for each time winning.</description>
     </item>
     
   </channel>
