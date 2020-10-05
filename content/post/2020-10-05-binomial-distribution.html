@@ -17,7 +17,7 @@ P(Sequence = s) = (1/2)^{10}.
 \]</span>
 W observe that each outcome would be equally likely, because the probability for Heads or Tails are the same: <span class="math inline">\(1/2\)</span>. Clearly this is not very helpful. So let us try something else: we count the number of Heads (calling it a success - the choice that Heads is a success is arbitrary and doesn’t matter). In our example the number of heads is</p>
 <p><span class="math display">\[H = 4.\]</span></p>
-<p>What is the probability for observing 4 Heads in 10 coin flips? This muse be something different than the probability calculate above for one specific sequence, because there are many ways to get 4 Heads. For instance {H,H,H,H,T,T,T,T,T,T} has 4 heads, and so does {H,T,H,T,H,T,H,T,T,T}. Both of these outcomes are equally likely and both of them yield 4 heads.</p>
+<p>What is the probability for observing 4 Heads in 10 coin flips? This must be something different than the probability calculated above for one specific sequence, because there are many ways to get 4 Heads. For instance {H,H,H,H,T,T,T,T,T,T} has 4 heads, and so does {H,T,H,T,H,T,H,T,T,T}. Both of these outcomes are equally likely and both of them yield 4 heads.</p>
 <p>A next question that naturally arises is whether the probabilities for H = 0, H = 1, etc. are different from each other. Intuitvely one would think so. Let us try to calculate this:</p>
 <ul>
 <li>H = 0</li>
@@ -64,8 +64,8 @@ ggplot(dat,aes(x = k,y= dist)) +
 <p>If we want to draw a random sample from a distribution, we can also do this in R:</p>
 <pre class="r"><code>pi = 0.5
 n = 10
-k = 0:10
+
 
 random.sample = rbinom(1,n,pi)
 print(random.sample)</code></pre>
-<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 3</code></pre>
