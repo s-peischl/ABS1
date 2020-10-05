@@ -19,7 +19,7 @@ W observe that each outcome would be equally likely, because the probability for
 
 $$H = 4.$$
 
-What is the probability for observing for Heads in 10 coin flips? This muse be something different than the probability calculate above for one specific sequence, because there are many ways to get four Heads. For instance {H,H,H,H,T,T,T,T,T,T} has four heads, and so does {H,T,H,T,H,T,H,T,T,T}. Both of these outcomes are equally likely and both of them yield four heads. 
+What is the probability for observing 4 Heads in 10 coin flips? This muse be something different than the probability calculate above for one specific sequence, because there are many ways to get 4 Heads. For instance {H,H,H,H,T,T,T,T,T,T} has 4 heads, and so does {H,T,H,T,H,T,H,T,T,T}. Both of these outcomes are equally likely and both of them yield 4 heads. 
 
 A next question that naturally arises is whether the probabilities for H = 0, H = 1, etc. are different from each other. Intuitvely one would think so. Let us try to calculate this:
 
