@@ -16,8 +16,11 @@ Here is some R code to illustrate the outcomes of the two strategies (staying an
 
 
 ```{r}
+library(ggplot2)
+library(dplyr)
+library(RColorBrewer)
 # number of runs
-n = 100
+n = 1000
 all.doors = 1:3
 
 # some variables to keep track of waht is going on
@@ -72,9 +75,36 @@ for (i in 1 : n)
 
 print(paste("The strategy 'switch' yielded ", sum(win.switch), " wins."))
 print(paste("The strategy 'stay' yielded ", sum(win.stay), " wins."))
+```
 
+
+We can visualize the outcome by plotting when and how often each strategy leads to winning the prize.
+
+```{r, echo=FALSE,out.width = "80%",fig.align="center"}
 dat = data.frame(switch = win.switch,stay = win.stay,chosen = chosen,winning = winning)
+
+ggplot(filter(dat,win.stay==T)) + 
+  geom_bin2d(aes(x = chosen,y = winning),bins=2.39) + 
+  scale_x_continuous(breaks=c(1,2,3),labels=c("Door 1","Door 2","Door 3")) +
+  scale_y_continuous(breaks=c(1,2,3),labels=c("Door 1","Door 2","Door 3")) +
+  xlab("Initially Chosen") +
+  ylab("Prize hiden") +
+  ggtitle("Keeping inital door") +
+  scale_fill_distiller(name = "Wins",palette=1, direction=1,limits=c(0, 150))  +
+  theme_classic() + 
+  theme(text = element_text(size = 20))
+
+ggplot(filter(dat,win.switch==T)) + 
+  geom_bin2d(aes(x = chosen,y = winning),bins=2.39) + 
+  scale_x_continuous(breaks=c(1,2,3),labels=c("Door 1","Door 2","Door 3")) +
+  scale_y_continuous(breaks=c(1,2,3),labels=c("Door 1","Door 2","Door 3")) +
+  xlab("Initially Chosen") +
+  ylab("Prize hiden") +
+  ggtitle("Switching door") +
+  scale_fill_distiller(name = "Wins",palette=1, direction=1,limits=c(0, 150))  +
+  theme_classic() + 
+  theme(text = element_text(size = 20))
 
 
 ```
-Note that the sum of switch or stay strategy winning sums to 100. As we have discussed in the lecture, "switch" wins exactly when "stay" doesn't win. And since staying wins with a probability of 1/3 (choosing the right door out of 3), we can conclude that switching must win with a probability of 2/3. Our simulation confirms this. 
+We see two interesting things: (1) "switch" wins exactly when "stay" doesn't win and (2) switching always wins if you chose the wrong door initially. Thus, staying wins with a probability of 1/3 (choosing the right door out of 3), and switching wins with a probability of 2/3. 

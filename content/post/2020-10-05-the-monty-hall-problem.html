@@ -14,8 +14,19 @@ tags:
 
 
 <p>Here is some R code to illustrate the outcomes of the two strategies (staying and switching) discussed in the lecture. You can copy and paste this code to play around with it.</p>
-<pre class="r"><code># number of runs
-n = 100
+<pre class="r"><code>library(ggplot2)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(RColorBrewer)
+# number of runs
+n = 1000
 all.doors = 1:3
 
 # some variables to keep track of waht is going on
@@ -69,8 +80,9 @@ for (i in 1 : n)
 
 
 print(paste(&quot;The strategy &#39;switch&#39; yielded &quot;, sum(win.switch), &quot; wins.&quot;))</code></pre>
-<pre><code>## [1] &quot;The strategy &#39;switch&#39; yielded  74  wins.&quot;</code></pre>
+<pre><code>## [1] &quot;The strategy &#39;switch&#39; yielded  659  wins.&quot;</code></pre>
 <pre class="r"><code>print(paste(&quot;The strategy &#39;stay&#39; yielded &quot;, sum(win.stay), &quot; wins.&quot;))</code></pre>
-<pre><code>## [1] &quot;The strategy &#39;stay&#39; yielded  26  wins.&quot;</code></pre>
-<pre class="r"><code>dat = data.frame(switch = win.switch,stay = win.stay,chosen = chosen,winning = winning)</code></pre>
-<p>Note that the sum of switch or stay strategy winning sums to 100. As we have discussed in the lecture, “switch” wins exactly when “stay” doesn’t win. And since staying wins with a probability of 1/3 (choosing the right door out of 3), we can conclude that switching must win with a probability of 2/3. Our simulation confirms this.</p>
+<pre><code>## [1] &quot;The strategy &#39;stay&#39; yielded  341  wins.&quot;</code></pre>
+<p>We can visualize the outcome by plotting when and how often each strategy leads to winning the prize.</p>
+<p><img src="/ABS1/post/2020-10-05-the-monty-hall-problem_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /><img src="/ABS1/post/2020-10-05-the-monty-hall-problem_files/figure-html/unnamed-chunk-2-2.png" width="80%" style="display: block; margin: auto;" />
+We see two interesting things: (1) “switch” wins exactly when “stay” doesn’t win and (2) switching always wins if you chose the wrong door initially. Thus, staying wins with a probability of 1/3 (choosing the right door out of 3), and switching wins with a probability of 2/3.</p>
