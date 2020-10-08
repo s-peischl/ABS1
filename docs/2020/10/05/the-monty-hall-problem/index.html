@@ -66,7 +66,7 @@
 
   <article class="article">
     
-    <span class="article-duration">2 min read</span>
+    <span class="article-duration">5 min read</span>
     
 
     <h1 class="article-title">The Monty Hall Problem</h1>
@@ -79,19 +79,28 @@
       
 
 
+<p>I discuss a solution to the Monty Hall Problem discussed in the lecture. There are many ways to think of this problem and a thorugh discussion can be found here: <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" class="uri">https://en.wikipedia.org/wiki/Monty_Hall_problem</a>.</p>
+<p>Game Rules:</p>
+<ol style="list-style-type: decimal">
+<li><p>Pick a door. One door has a prize behind it, say a car, the other two contain just “goats”. (Some people might prefer a goat over a car, me included. I just stick with the original formulation here, so let’s just say the goat is a symbol for not getting anything and the car a symbol for a prize we actually like to have).</p></li>
+<li><p>As there are two goats, no matter how you choose, there is at least one goat left among the two remaining doors. The host then reveals a goat behind one of the remaining doors. This means that the opened door is out of the game.</p></li>
+<li><p>The host offers you to switch doors. You decide whether you want to switch doors or stay with the one you chose. If you switch doors, there is just one door to choose from as one has been removed from the game at step 2.</p></li>
+</ol>
+<p><strong>What should you do?</strong></p>
+<p>Let us calculate the chances of winning for the two strategies “switching” and “staying”. We use the probabilities in the tree diagrams below. We have one tree diagram to calculate the “switch” strategy’s winning chance, and one for the “stay” strategy:</p>
+<div class="figure">
+<img src="/post/2020-10-05-the-monty-hall-problem_files/MontyHall.jpg" style="width:100.0%" alt="" />
+<p class="caption"><strong>Figure 1</strong>: <em>Probability Tree for Monty Hall Problem</em></p>
+</div>
+<p>The first branches correspond to the “choose initial door” phase. Without any prior information about the doors,the probability that the car is behind the chosen door is 1/3. Now the contestant makes a further choice between switching doors or changing doors.</p>
+<p>Let us look at the diagram for staying (left side of Fig. 1). The probability that the car is behind the door unopened by your host depends on which choice you made originally. If the car is behind the door you chose first, the probability that it is behind the other door is 0. If the door you chose first has a goat behind it, then the car is most definitely behind the other door, and the probability that it is behind the door left unopened by your host is 1. We get for the probability to win the car f we stay:
+<span class="math display">\[P(win,stay) = 1/3 \times 1 + 1/3 \times 0 + 1/3 \times 0=  1/3.\]</span>
+This makes sense, we choose a door randomly and each has the same 1/3 chance of winning. What happens afterwards is not of concern to us as we stick to the originally chosen door. So the only way to win is to chose the right door initially.</p>
+<p>Not let us consider what happens if we switch (right side of Fig. 1). The formal calculations now yields:
+<span class="math display">\[P(win,switch) = 1/3 \times 0 + 1/3 \times 1 + 1/3 \times 1 =  2/3.\]</span>
+This calculation tells us that we would win with a 2/3 probability if we decide to switch. How is that possible? I think it helps to think about this strategy more about a way to force the moderator to give us some crucial information, namely about the location of a bad door. In more technical terms, the sampling space has changed after the opening of the door and it changes differently depending on the first choice of the door. If we choose a goat initially, it is certain that the remaining door is a win, because only one got is left among the two doors. Since it is easier to chose the wrong door initially, we should switch as this would turn a bad - but very likely - initial choice into a good choice.</p>
 <p>Here is some R code to illustrate the outcomes of the two strategies (staying and switching) discussed in the lecture. You can copy and paste this code to play around with it.</p>
-<pre class="r"><code>library(ggplot2)
-library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>library(RColorBrewer)
-# number of runs
+<pre class="r"><code># number of runs
 n = 1000
 all.doors = 1:3
 
@@ -142,16 +151,12 @@ for (i in 1 : n)
   chosen[i] = chosen.door
   winning[i] = winning.door
 
-}
-
-
-print(paste(&quot;The strategy &#39;switch&#39; yielded &quot;, sum(win.switch), &quot; wins.&quot;))</code></pre>
-<pre><code>## [1] &quot;The strategy &#39;switch&#39; yielded  659  wins.&quot;</code></pre>
-<pre class="r"><code>print(paste(&quot;The strategy &#39;stay&#39; yielded &quot;, sum(win.stay), &quot; wins.&quot;))</code></pre>
-<pre><code>## [1] &quot;The strategy &#39;stay&#39; yielded  341  wins.&quot;</code></pre>
+}</code></pre>
+<pre><code>## [1] &quot;The strategy &#39;switch&#39; yielded  671  wins.&quot;</code></pre>
+<pre><code>## [1] &quot;The strategy &#39;stay&#39; yielded  329  wins.&quot;</code></pre>
 <p>We can visualize the outcome by plotting when and how often each strategy leads to winning the prize.</p>
-<p><img src="/ABS1/post/2020-10-05-the-monty-hall-problem_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /><img src="/ABS1/post/2020-10-05-the-monty-hall-problem_files/figure-html/unnamed-chunk-2-2.png" width="80%" style="display: block; margin: auto;" />
-We see two interesting things: (1) “switch” wins exactly when “stay” doesn’t win and (2) switching always wins if you chose the wrong door initially. Thus, staying wins with a probability of 1/3 (choosing the right door out of 3), and switching wins with a probability of 2/3.</p>
+<p><img src="/ABS1/post/2020-10-05-the-monty-hall-problem_files/figure-html/unnamed-chunk-4-1.png" width="80%" style="display: block; margin: auto;" /><img src="/ABS1/post/2020-10-05-the-monty-hall-problem_files/figure-html/unnamed-chunk-4-2.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>We see two interesting things in this figures: (1) “switch” wins exactly when “stay” doesn’t win and (2) switching always wins if you chose the wrong door initially. Thus, staying wins with a probability of 1/3 (choosing the right door out of 3), and switching wins with a probability of 2/3. Exactly as we have calcualted with our decision tree.</p>
 
     </div>
   </article>
@@ -188,6 +193,9 @@ We see two interesting things: (1) “switch” wins exactly when “stay” doe
 
 
     
+<script src="/ABS1/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
   </body>

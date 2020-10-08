@@ -48,7 +48,10 @@ P[D|T] = \frac{0.95 * 0.01 }{0.1085} \approx 0.09
 <p>So we have 95 true positives but 999 false positives and the proportion of true positive results among all positives results is roughly 95/(95+999) <span class="math inline">\(\approx\)</span> 0.09.</p>
 <p>The key point here is that the disease is rare. So even if there is a small chance for a false positive, we expect them to reach large numbers as most tested people do not have the disease. Conversely, the true positive results will be small, because there are only few people with the disease that can yield true positive results. To illustrate this further, let us plot P[D|T] as function of the prevalence P(D):</p>
 <pre class="r"><code>library(ggplot2)
-pD = seq(0,1,by=0.001)
+library(xkcd)</code></pre>
+<pre><code>## Loading required package: extrafont</code></pre>
+<pre><code>## Registering fonts with R</code></pre>
+<pre class="r"><code>pD = seq(0,1,by=0.001)
 pTgivenD = 0.95
 pTgiven_notD = 0.1
 
@@ -65,7 +68,8 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   theme_classic() +
   xlab(&quot;P[D]&quot;) + 
   ylab(&quot;P[D|T]&quot;) + 
-  theme(text = element_text(size = 25))  </code></pre>
+  theme(text = element_text(size = 25))   + 
+  theme_xkcd() </code></pre>
 <p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-1-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>We see that the test’s false positive probability strongly depends on the prevalence. The rarer the disease is, the less reliable the test is in informing you whether you actually have the disease. The specificity also has a strong impact on the interpretation of the test. For instance, for the current Covid-19 PCR tests specificity seems to be closer to 99% than to 90%, then we would get the following:</p>
 <pre class="r"><code>pD = seq(0,1,by=0.001)
@@ -85,5 +89,6 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   theme_classic()+
   xlab(&quot;P[D]&quot;) + 
   ylab(&quot;P[D|T]&quot;) + 
-  theme(text = element_text(size = 20)) </code></pre>
+  theme(text = element_text(size = 20))  + 
+  theme_xkcd() </code></pre>
 <p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /></p>

@@ -9,16 +9,49 @@ tags:
   - Paradox
   - Simulation
   - Probability Theory
+
 ---
 
+I discuss a solution to the Monty Hall Problem discussed in the lecture. There are many ways to think of this problem and a thorugh discussion can be found here: https://en.wikipedia.org/wiki/Monty_Hall_problem. 
+
+Game Rules:
+
+1. Pick a door. One door has a prize behind it, say a car, the other two contain  just "goats". (Some people might prefer a goat over a car, me included. I just stick with the original formulation here, so let's just say the goat is a symbol for not getting anything and the car a symbol for a prize we actually like to have).
+
+2. As there are two goats, no matter how you choose, there is at least one goat left among the  two remaining doors. The host then reveals a goat behind one of the remaining doors. This means that the opened door is out of the game. 
+
+3. The host offers you to switch doors. You decide whether you want to switch doors or stay with the one you chose. If you switch doors, there is just one door to choose from as one has been removed from the game at step 2. 
+
+**What should you do?**
+
+
+Let us calculate the chances of winning for the two strategies "switching" and "staying". We use the probabilities in the tree diagrams below. We have one tree diagram to calculate the "switch" strategy's winning chance, and one for the "stay" strategy:
+
+
+![**Figure 1**: _Probability Tree for Monty Hall Problem_](/post/2020-10-05-the-monty-hall-problem_files/MontyHall.jpg){width=100%}
+
+The first branches correspond to the "choose initial door" phase. Without any prior information about the doors,the probability that the car is behind the chosen door is 1/3. Now the contestant makes a further choice between switching doors or changing doors. 
+
+Let us look at the diagram for staying (left side of Fig. 1). The probability that the car is behind the door unopened by your host depends on which choice you made originally. If the car is behind the door you chose first, the probability that it is behind the other door is 0. If the door you chose first has a goat behind it, then the car is most definitely behind the other door, and the probability that it is behind the door left unopened by your host is 1. We get for the probability to win the car f we stay:
+$$P(win,stay) = 1/3 \times 1 + 1/3 \times 0 + 1/3 \times 0=  1/3.$$
+This makes sense, we choose a door randomly and each has the same 1/3 chance of winning. What happens afterwards is not of concern to us as we stick to the originally chosen door. So the only way to win is to chose the right door initially. 
+
+Not let us consider what happens if we switch (right side of Fig. 1). The formal calculations now yields:
+$$P(win,switch) = 1/3 \times 0 + 1/3 \times 1 + 1/3 \times 1 =  2/3.$$
+This calculation tells us that we would win with a 2/3 probability if we decide to switch. How is that possible? I think it helps to think about this strategy more about a way to force the moderator to give us some crucial information, namely about the location of a bad door. In more technical terms, the sampling space has changed after the opening of the door and it changes differently depending on the first choice of the door. If we choose a goat initially, it is certain that the remaining door is a win, because only one got is left among the two doors. Since it is easier to chose the wrong door initially, we should switch as this would turn a bad - but very likely  - initial choice into a good choice. 
 
 Here is some R code to illustrate the outcomes of the two strategies (staying and switching) discussed in the lecture. You can copy and paste this code to play around with it. 
 
 
-```{r}
-library(ggplot2)
+```{r,echo=FALSE,warning = FALSE,message = FALSE}
+library(ggplot2) 
 library(dplyr)
 library(RColorBrewer)
+library(xkcd)
+```
+
+
+```{r}
 # number of runs
 n = 1000
 all.doors = 1:3
@@ -71,8 +104,10 @@ for (i in 1 : n)
   winning[i] = winning.door
 
 }
+```
 
 
+```{r,echo = FALSE}
 print(paste("The strategy 'switch' yielded ", sum(win.switch), " wins."))
 print(paste("The strategy 'stay' yielded ", sum(win.stay), " wins."))
 ```
@@ -80,7 +115,8 @@ print(paste("The strategy 'stay' yielded ", sum(win.stay), " wins."))
 
 We can visualize the outcome by plotting when and how often each strategy leads to winning the prize.
 
-```{r, echo=FALSE,out.width = "80%",fig.align="center"}
+
+```{r,out.width = "80%",fig.align="center",echo=FALSE}
 dat = data.frame(switch = win.switch,stay = win.stay,chosen = chosen,winning = winning)
 
 ggplot(filter(dat,win.stay==T)) + 
@@ -92,7 +128,8 @@ ggplot(filter(dat,win.stay==T)) +
   ggtitle("Keeping inital door") +
   scale_fill_distiller(name = "Wins",palette=1, direction=1,limits=c(0, 150))  +
   theme_classic() + 
-  theme(text = element_text(size = 20))
+  theme(text = element_text(size = 20)) + 
+  theme_xkcd() 
 
 ggplot(filter(dat,win.switch==T)) + 
   geom_bin2d(aes(x = chosen,y = winning),bins=2.39) + 
@@ -103,8 +140,10 @@ ggplot(filter(dat,win.switch==T)) +
   ggtitle("Switching door") +
   scale_fill_distiller(name = "Wins",palette=1, direction=1,limits=c(0, 150))  +
   theme_classic() + 
-  theme(text = element_text(size = 20))
+  theme(text = element_text(size = 20)) + 
+  theme_xkcd() 
 
 
 ```
-We see two interesting things: (1) "switch" wins exactly when "stay" doesn't win and (2) switching always wins if you chose the wrong door initially. Thus, staying wins with a probability of 1/3 (choosing the right door out of 3), and switching wins with a probability of 2/3. 
+
+We see two interesting things in this figures: (1) "switch" wins exactly when "stay" doesn't win and (2) switching always wins if you chose the wrong door initially. Thus, staying wins with a probability of 1/3 (choosing the right door out of 3), and switching wins with a probability of 2/3. Exactly as we have calcualted with our decision tree. 

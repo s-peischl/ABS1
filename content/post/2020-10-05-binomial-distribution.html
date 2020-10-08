@@ -46,7 +46,10 @@ P( H = k) = {n\choose k} (1/2)^n
 <span class="math display">\[P(H = k) = {n\choose k} \pi^k (1-\pi)^{n-k}\]</span></p>
 <p>In R we can get this distribution very easily in the following way:</p>
 <pre class="r"><code>library(ggplot2)
-# plot the distribution
+library(xkcd)</code></pre>
+<pre><code>## Loading required package: extrafont</code></pre>
+<pre><code>## Registering fonts with R</code></pre>
+<pre class="r"><code># plot the distribution
 
 pi = 0.5
 n = 10
@@ -59,7 +62,8 @@ dat = data.frame(k = k,dist = bin.dist)
 ggplot(dat,aes(x = k,y= dist)) + 
   geom_point() +
   theme_classic() + 
-  theme(text = element_text(size = 20)) </code></pre>
+  theme(text = element_text(size = 20))  + 
+  theme_xkcd() </code></pre>
 <p><img src="/ABS1/post/2020-10-05-binomial-distribution_files/figure-html/unnamed-chunk-1-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>If we want to draw a random sample from a distribution, we can also do this in R:</p>
 <pre class="r"><code>pi = 0.5
@@ -68,4 +72,4 @@ n = 10
 
 random.sample = rbinom(1,n,pi)
 print(random.sample)</code></pre>
-<pre><code>## [1] 3</code></pre>
+<pre><code>## [1] 7</code></pre>
