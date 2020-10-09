@@ -13,7 +13,7 @@
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>/ABS1/2020/10/05/binomial-distribution/</guid>
-      <description>We introduce the binomial distribution with a simple example: imagine you have a coin with two sides: Heads and Tails. We don’t know if the coin is fair, but we can try to do an experiment to see if it s fair. We flip it many times and if it is a fair coin, we should see the same number of Heads and Tails. Let’s say we have flipped it 10 times and got the following sequence: s = {H,T,T,T,H,H,T,H,T,T}.</description>
+      <description>We introduce the binomial distribution with a simple example: imagine you have a coin with two sides: Heads and Tails. We don&#39;t know if the coin is fair, but we can try to do an experiment to see if it s fair. We flip it many times and if it is a fair coin, we should see the same number of Heads and Tails. Let&#39;s say we have flipped it 10 times and got the following sequence: s = {H,T,T,T,H,H,T,H,T,T}.</description>
     </item>
     
     <item>
