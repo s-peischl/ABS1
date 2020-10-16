@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exponential on Applied Biostatistics I</title>
+    <link>/ABS1/tags/exponential/</link>
+    <description>Recent content in Exponential on Applied Biostatistics I</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/tags/exponential/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distance to first crossover event</title>
+      <link>/ABS1/2020/10/16/distance-to-first-crossover-event/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/2020/10/16/distance-to-first-crossover-event/</guid>
+      <description>We want to calcualte the distribution of the distance to the first crossover event on a long chromosome. We call this distance \(X\).
+Let \(Y\) be the number of recombination events over a length of \(d\) centimorgan. This number is Poisson distirbuted with parameter \(\lambda = d\). The probability that no crossover occured in this stretch of DNA is then
+\[ P(Y = 0) = e^{-d}. \]
+Note that if \(Y = 0\), this means that the distance to the first recombination event must be larger than \(d\).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.75.1" />
+
+
+<title>Distance to first crossover event - Applied Biostatistics I</title>
+<meta property="og:title" content="Distance to first crossover event - Applied Biostatistics I">
+
+
+  <link href='/ABS1/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/ABS1/css/fonts.css" media="all">
+<link rel="stylesheet" href="/ABS1/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/ABS1/" class="nav-logo">
+    <img src="/ABS1/images/logo1.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+<p style="font-size:30px"> Applied Biostatistics I HS 2020
+  <ul class="nav-links">
+    
+    <li><a href="/ABS1/about/">About</a></li>
+    
+    <li><a href="/ABS1/contact/">Contact</a></li>
+    
+    <li><a href="https://ilias.unibe.ch/goto_ilias3_unibe_crs_1793180.html">Ilias</a></li>
+    
+    <li><a href="https://twitter.com/StephanPeischl">Twitter</a></li>
+    
+  </ul>
+  
+
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">Distance to first crossover event</h1>
+
+    
+    <span class="article-date">2020-10-16</span>
+    
+
+    <div class="article-content">
+      
+
+
+<p>We want to calcualte the distribution of the distance to the first crossover event on a long chromosome. We call this distance <span class="math inline">\(X\)</span>.</p>
+<p>Let <span class="math inline">\(Y\)</span> be the number of recombination events over a length of <span class="math inline">\(d\)</span> centimorgan. This number is Poisson distirbuted with parameter <span class="math inline">\(\lambda = d\)</span>. The probability that no crossover occured in this stretch of DNA is then</p>
+<p><span class="math display">\[
+P(Y = 0) = e^{-d}.
+\]</span></p>
+<p>Note that if <span class="math inline">\(Y = 0\)</span>, this means that the distance to the first recombination event must be larger than <span class="math inline">\(d\)</span>. It follows that</p>
+<p><span class="math display">\[P(X &gt; d) = P(Y = 0) = e^{-d}.\]</span> The CDF of X is therfore <span class="math display">\[F_X(d) = P(X \leq d) = 1- P(X &gt; d) = 1- e^{-d}.\]</span></p>
+<p>This is the CDF of an exponential distribution with rate 1, whcih is what we wanted to show.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/ABS1/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/ABS1/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/ABS1/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

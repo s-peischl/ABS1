@@ -1,0 +1,25 @@
+---
+title: Distance to first crossover event
+author: SP
+date: '2020-10-16'
+slug: distance-to-first-crossover-event
+categories:
+  - Probability Theory
+tags:
+  - Probability Theory
+  - Poisson
+  - Exponential
+  - Recombination
+  - Haldane
+---
+
+
+
+<p>We want to calcualte the distribution of the distance to the first crossover event on a long chromosome. We call this distance <span class="math inline">\(X\)</span>.</p>
+<p>Let <span class="math inline">\(Y\)</span> be the number of recombination events over a length of <span class="math inline">\(d\)</span> centimorgan. This number is Poisson distirbuted with parameter <span class="math inline">\(\lambda = d\)</span>. The probability that no crossover occured in this stretch of DNA is then</p>
+<p><span class="math display">\[
+P(Y = 0) = e^{-d}.
+\]</span></p>
+<p>Note that if <span class="math inline">\(Y = 0\)</span>, this means that the distance to the first recombination event must be larger than <span class="math inline">\(d\)</span>. It follows that</p>
+<p><span class="math display">\[P(X &gt; d) = P(Y = 0) = e^{-d}.\]</span> The CDF of X is therfore <span class="math display">\[F_X(d) = P(X \leq d) = 1- P(X &gt; d) = 1- e^{-d}.\]</span></p>
+<p>This is the CDF of an exponential distribution with rate 1, whcih is what we wanted to show.</p>
