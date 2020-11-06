@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.75.1" />
+
+
+<title>Deriving a Likelihood - Applied Biostatistics I</title>
+<meta property="og:title" content="Deriving a Likelihood - Applied Biostatistics I">
+
+
+  <link href='/ABS1/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/ABS1/css/fonts.css" media="all">
+<link rel="stylesheet" href="/ABS1/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/ABS1/" class="nav-logo">
+    <img src="/ABS1/images/logo1.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+<p style="font-size:30px"> Applied Biostatistics I HS 2020
+  <ul class="nav-links">
+    
+    <li><a href="/ABS1/about/">About</a></li>
+    
+    <li><a href="/ABS1/contact/">Contact</a></li>
+    
+    <li><a href="https://ilias.unibe.ch/goto_ilias3_unibe_crs_1793180.html">Ilias</a></li>
+    
+    <li><a href="https://twitter.com/StephanPeischl">Twitter</a></li>
+    
+  </ul>
+  
+
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Deriving a Likelihood</h1>
+
+    
+    <span class="article-date">2020-11-06</span>
+    
+
+    <div class="article-content">
+      
+
+
+<p>In this post we are going to explore the likelihood, the log-likelihood and how to derive a maximum likelihood estimator for the parameters of a Poisson distribution.</p>
+<p>We start by genearting a random data set:</p>
+<pre class="r"><code>set.seed(42)
+sample.size = 100
+lambda = 2
+x = rpois(sample.size,lambda)</code></pre>
+<p>This is a sample from a Poisson distribution, with mean <span class="math inline">\(\lambda =2\)</span>. We sinterpret it as i.i.d. realizations of a random variable <span class="math inline">\(X\)</span> and label the data points: <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span>, where n is the sample size.</p>
+<p>For a given pqrameter <span class="math inline">\(\lambda\)</span>, the probabiltiy to observe the value <span class="math inline">\(x \in \{ 0,1,2,3, ... \}\)</span> is given by: <span class="math inline">\(e^{-\lambda} \frac{\lambda^{x}}{x!}\)</span>. The likelihood of the sample is the the joint probability mass function of the whole sample as a function of the parameter <span class="math inline">\(\lambda\)</span>. Becassue the data points are independent, the likelihood is then simply the product of the individual probabilties for each <span class="math inline">\(x_i\)</span>: <span class="math display">\[\displaystyle L(\lambda) = \prod_{i=1}^n e^{-\lambda} \frac{\lambda^{x_i}}{x_i!}.\]</span></p>
+<p>We can plot this for our example:</p>
+<pre class="r"><code>lambda.vec = seq(1,3,by = 0.01)
+L = 1
+for(i in 1: sample.size)
+{ 
+  L = L*dpois(x[i],lambda.vec)
+}
+
+dat = data.frame(lambda = lambda.vec,Likelihood = L)
+
+
+
+ggplot(data = dat,aes(x = lambda,y= Likelihood)) +
+  geom_line() + 
+  theme(text = element_text(size = 20)) + 
+  theme_xkcd() </code></pre>
+<p><img src="/ABS1/post/2020-11-06-deriving-a-likelihood_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Next we plot the log-likelihood of the sample: <span class="math display">\[\displaystyle \ell(\lambda) = \sum_{i=1}^n \left[ x_i \log(\lambda) - \lambda - \log(x_i!) \right]\]</span></p>
+<pre class="r"><code>ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
+  geom_line() + 
+  theme(text = element_text(size = 20)) + 
+  theme_xkcd() </code></pre>
+<p><img src="/ABS1/post/2020-11-06-deriving-a-likelihood_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Note that the log likelihood and the likelihood are maximized for the same value of <span class="math inline">\(\lambda\)</span>!</p>
+<p>Finally we are going to derive the maximum likelihood estimator. It is much simpler to do this for the log-likelihood. First we take the derivateive with respect to <span class="math inline">\(\lambda:\)</span></p>
+<p><span class="math display">\[\frac{d} {d\lambda}\displaystyle \ell(\lambda) = \sum_{i=1}^n \left[ x_i /\lambda - 1 \right]\]</span></p>
+<p>To find the maximum of <span class="math inline">\(l(\lambda)\)</span> we set the derivative to 0 and solve for <span class="math inline">\(\lambda\)</span>: <span class="math display">\[\sum_{i=1}^n \left[ x_i /\lambda - 1 \right] = 0\]</span></p>
+<p>First we take the 1 out off the sum and because <span class="math inline">\(\sum_{i=1}^n 1 = n\)</span> we get: <span class="math display">\[  \sum_{i=1}^n \left[ x_i /\lambda \right] - n = 0\]</span></p>
+<p>Next, we can also take the <span class="math inline">\(\lambda\)</span> out of the sum on the left-hand side: <span class="math display">\[ \frac{1} {\lambda}  \sum_{i=1}^n  x_i  = n \]</span> Finally we divide both sides by <span class="math inline">\(n\)</span> and multiply by both sides by <span class="math inline">\(\lambda\)</span>: <span class="math display">\[  \frac{\sum_{i=1}^n \left[ x_i /\lambda \right]} {n} = {\lambda}\]</span></p>
+<p>And this gives us our maximum likelihood estimator (MLE) <span class="math inline">\(\hat{\lambda}\)</span>:</p>
+<p><span class="math display">\[\displaystyle \hat{\lambda} = \frac{1}{n} (x_1 + x_2 + \ldots x_n) = \frac{1}{n} \sum_{i=1}^n x_i = \overline{x}\]</span></p>
+<p>If we calcualte this for our sample, we see that it indeed maximizes our likelihood:</p>
+<pre class="r"><code>lambda.hat = mean(x)
+
+
+ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
+  geom_line() + 
+  theme(text = element_text(size = 20)) + 
+  theme_xkcd() +
+  geom_vline(xintercept = lambda.hat) +
+  annotate(&quot;text&quot;, x=2.5, y = -170,label = &quot;MLE&quot;, family=&quot;xkcd&quot;,size=5) +
+  geom_vline(xintercept = 2,col=&quot;blue&quot;) +
+  annotate(&quot;text&quot;, x=1.5, y = -170,label = &quot;the real value&quot;, family=&quot;xkcd&quot;,size=5,col=&quot;blue&quot;)</code></pre>
+<p><img src="/ABS1/post/2020-11-06-deriving-a-likelihood_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/ABS1/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/ABS1/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/ABS1/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

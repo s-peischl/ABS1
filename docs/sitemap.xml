@@ -4,12 +4,52 @@
   
   <url>
     <loc>/ABS1/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/ABS1/categories/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/2020/11/06/deriving-a-likelihood/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/tags/inference/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/tags/likelihood/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/categories/likelihood/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/tags/poisson/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/post/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/categories/statistics/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/tags/</loc>
+    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,16 +68,6 @@
   </url>
   
   <url>
-    <loc>/ABS1/tags/poisson/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/ABS1/post/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/ABS1/tags/probability-theory/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
@@ -49,11 +79,6 @@
   
   <url>
     <loc>/ABS1/tags/recombination/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/ABS1/tags/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   

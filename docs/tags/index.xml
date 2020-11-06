@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Applied Biostatistics I</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inference</title>
+      <link>/ABS1/tags/inference/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/tags/inference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Likelihood</title>
+      <link>/ABS1/tags/likelihood/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/tags/likelihood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Poisson</title>
+      <link>/ABS1/tags/poisson/</link>
+      <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/tags/poisson/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Exponential</title>
       <link>/ABS1/tags/exponential/</link>
@@ -22,15 +49,6 @@
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>/ABS1/tags/haldane/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Poisson</title>
-      <link>/ABS1/tags/poisson/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/ABS1/tags/poisson/</guid>
       <description></description>
     </item>
     
