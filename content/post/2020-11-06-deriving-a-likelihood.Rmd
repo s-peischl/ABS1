@@ -79,7 +79,7 @@ $$  \sum_{i=1}^n \left[ x_i /\lambda \right] - n = 0$$
 Next, we can also take the $\lambda$ out of the sum on the left-hand side:
 $$ \frac{1} {\lambda}  \sum_{i=1}^n  x_i  = n $$
 Finally we divide both sides by $n$ and multiply by both sides by $\lambda$:
-$$  \frac{\sum_{i=1}^n \left[ x_i /\lambda \right]} {n} = {\lambda}$$
+$$  \frac{\sum_{i=1}^n x_i } {n} = {\lambda}$$
 
 And this gives us our maximum likelihood estimator (MLE) $\hat{\lambda}$: 
 
@@ -103,6 +103,36 @@ ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
   annotate("text", x=1.5, y = -170,label = "the real value", family="xkcd",size=5,col="blue")
 
 ```
+
+We can also clacualte a confidence interval for our estiamte. In fact, we should allways do this! First we do the approxiamte one with the 2 SE rule:
+
+```{r}
+sd.data = sd(x)
+SE = sd.data/(sqrt(sample.size))
+CI.lower = lambda.hat - 2*SE
+CI.upper = lambda.hat + 2*SE
+print(c(CI.lower,CI.upper))
+````
+
+For comparison, we can also use the function t.test (which we will learn more about later):
+```{r}
+t.test(x)
+````
+
+We find almost the same confidence intervals in both cases. The calculation in the t.test function uses the percentiles of the t-distribution. We can also do this "by hand":
+
+```{r}
+sd.data = sd(x)
+SE = sd.data/(sqrt(sample.size))
+
+alpha = 0.05
+CI.lower = lambda.hat + qt(alpha/2,sample.size-1)*SE
+CI.upper =  lambda.hat + qt(1-alpha/2,sample.size-1)*SE
+print(c(CI.lower,CI.upper))
+````
+
+
+
 
 
 

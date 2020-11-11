@@ -66,7 +66,7 @@
 
   <article class="article">
     
-    <span class="article-duration">3 min read</span>
+    <span class="article-duration">4 min read</span>
     
 
     <h1 class="article-title">Deriving a Likelihood</h1>
@@ -115,7 +115,7 @@ ggplot(data = dat,aes(x = lambda,y= Likelihood)) +
 <p><span class="math display">\[\frac{d} {d\lambda}\displaystyle \ell(\lambda) = \sum_{i=1}^n \left[ x_i /\lambda - 1 \right]\]</span></p>
 <p>To find the maximum of <span class="math inline">\(l(\lambda)\)</span> we set the derivative to 0 and solve for <span class="math inline">\(\lambda\)</span>: <span class="math display">\[\sum_{i=1}^n \left[ x_i /\lambda - 1 \right] = 0\]</span></p>
 <p>First we take the 1 out off the sum and because <span class="math inline">\(\sum_{i=1}^n 1 = n\)</span> we get: <span class="math display">\[  \sum_{i=1}^n \left[ x_i /\lambda \right] - n = 0\]</span></p>
-<p>Next, we can also take the <span class="math inline">\(\lambda\)</span> out of the sum on the left-hand side: <span class="math display">\[ \frac{1} {\lambda}  \sum_{i=1}^n  x_i  = n \]</span> Finally we divide both sides by <span class="math inline">\(n\)</span> and multiply by both sides by <span class="math inline">\(\lambda\)</span>: <span class="math display">\[  \frac{\sum_{i=1}^n \left[ x_i /\lambda \right]} {n} = {\lambda}\]</span></p>
+<p>Next, we can also take the <span class="math inline">\(\lambda\)</span> out of the sum on the left-hand side: <span class="math display">\[ \frac{1} {\lambda}  \sum_{i=1}^n  x_i  = n \]</span> Finally we divide both sides by <span class="math inline">\(n\)</span> and multiply by both sides by <span class="math inline">\(\lambda\)</span>: <span class="math display">\[  \frac{\sum_{i=1}^n x_i } {n} = {\lambda}\]</span></p>
 <p>And this gives us our maximum likelihood estimator (MLE) <span class="math inline">\(\hat{\lambda}\)</span>:</p>
 <p><span class="math display">\[\displaystyle \hat{\lambda} = \frac{1}{n} (x_1 + x_2 + \ldots x_n) = \frac{1}{n} \sum_{i=1}^n x_i = \overline{x}\]</span></p>
 <p>If we calcualte this for our sample, we see that it indeed maximizes our likelihood:</p>
@@ -131,6 +131,35 @@ ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
   geom_vline(xintercept = 2,col=&quot;blue&quot;) +
   annotate(&quot;text&quot;, x=1.5, y = -170,label = &quot;the real value&quot;, family=&quot;xkcd&quot;,size=5,col=&quot;blue&quot;)</code></pre>
 <p><img src="/ABS1/post/2020-11-06-deriving-a-likelihood_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>We can also clacualte a confidence interval for our estiamte. In fact, we should allways do this! First we do the approxiamte one with the 2 SE rule:</p>
+<pre class="r"><code>sd.data = sd(x)
+SE = sd.data/(sqrt(sample.size))
+CI.lower = lambda.hat - 2*SE
+CI.upper = lambda.hat + 2*SE
+print(c(CI.lower,CI.upper))</code></pre>
+<pre><code>## [1] 1.815023 2.384977</code></pre>
+<p>For comparison, we can also use the function t.test (which we will learn more about later):</p>
+<pre class="r"><code>t.test(x)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  x
+## t = 14.738, df = 99, p-value &lt; 2.2e-16
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  1.817272 2.382728
+## sample estimates:
+## mean of x 
+##       2.1</code></pre>
+<p>We find almost the same confidence intervals in both cases. The calculation in the t.test function uses the percentiles of the t-distribution. We can also do this &quot;by hand&quot;:</p>
+<pre class="r"><code>sd.data = sd(x)
+SE = sd.data/(sqrt(sample.size))
+
+alpha = 0.05
+CI.lower = lambda.hat + qt(alpha/2,sample.size-1)*SE
+CI.upper =  lambda.hat + qt(1-alpha/2,sample.size-1)*SE
+print(c(CI.lower,CI.upper))</code></pre>
+<pre><code>## [1] 1.817272 2.382728</code></pre>
 
     </div>
   </article>
