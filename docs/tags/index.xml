@@ -2,107 +2,107 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Applied Biostatistics I</title>
-    <link>/ABS1/tags/</link>
+    <link>https://s-peischl.github.io/ABS1/tags/</link>
     <description>Recent content in Tags on Applied Biostatistics I</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://s-peischl.github.io/ABS1/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Inference</title>
-      <link>/ABS1/tags/inference/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/inference/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/inference/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/inference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Likelihood</title>
-      <link>/ABS1/tags/likelihood/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/likelihood/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/likelihood/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/likelihood/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Poisson</title>
-      <link>/ABS1/tags/poisson/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/poisson/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/poisson/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/poisson/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exponential</title>
-      <link>/ABS1/tags/exponential/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/exponential/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/exponential/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/exponential/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Haldane</title>
-      <link>/ABS1/tags/haldane/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/haldane/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/haldane/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/haldane/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability Theory</title>
-      <link>/ABS1/tags/probability-theory/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/probability-theory/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/probability-theory/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/probability-theory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recombination</title>
-      <link>/ABS1/tags/recombination/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/recombination/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/recombination/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/recombination/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Distributions</title>
-      <link>/ABS1/tags/distributions/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/distributions/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/distributions/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/distributions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paradox</title>
-      <link>/ABS1/tags/paradox/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/paradox/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/paradox/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/paradox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Simulation</title>
-      <link>/ABS1/tags/simulation/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/simulation/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/simulation/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/simulation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>General Information</title>
-      <link>/ABS1/tags/general-information/</link>
+      <link>https://s-peischl.github.io/ABS1/tags/general-information/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/tags/general-information/</guid>
+      <guid>https://s-peischl.github.io/ABS1/tags/general-information/</guid>
       <description></description>
     </item>
     

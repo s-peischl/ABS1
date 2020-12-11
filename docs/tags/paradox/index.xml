@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paradox on Applied Biostatistics I</title>
-    <link>/ABS1/tags/paradox/</link>
+    <link>https://s-peischl.github.io/ABS1/tags/paradox/</link>
     <description>Recent content in Paradox on Applied Biostatistics I</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/tags/paradox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://s-peischl.github.io/ABS1/tags/paradox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Monty Hall Problem</title>
-      <link>/ABS1/2020/10/05/the-monty-hall-problem/</link>
+      <link>https://s-peischl.github.io/ABS1/2020/10/05/the-monty-hall-problem/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/2020/10/05/the-monty-hall-problem/</guid>
+      <guid>https://s-peischl.github.io/ABS1/2020/10/05/the-monty-hall-problem/</guid>
       <description>I discuss a solution to the Monty Hall Problem discussed in the lecture. There are many ways to think of this problem and a thorugh discussion can be found here: https://en.wikipedia.org/wiki/Monty_Hall_problem.
 Game Rules:
 Pick a door. One door has a prize behind it, say a car, the other two contain just &amp;quot;goats&amp;quot;. (Some people might prefer a goat over a car, me included. I just stick with the original formulation here, so let&#39;s just say the goat is a symbol for not getting anything and the car a symbol for a prize we actually like to have).</description>

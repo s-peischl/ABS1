@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recombination on Applied Biostatistics I</title>
-    <link>/ABS1/tags/recombination/</link>
+    <link>https://s-peischl.github.io/ABS1/tags/recombination/</link>
     <description>Recent content in Recombination on Applied Biostatistics I</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/tags/recombination/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://s-peischl.github.io/ABS1/tags/recombination/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Distance to first crossover event</title>
-      <link>/ABS1/2020/10/16/distance-to-first-crossover-event/</link>
+      <link>https://s-peischl.github.io/ABS1/2020/10/16/distance-to-first-crossover-event/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/2020/10/16/distance-to-first-crossover-event/</guid>
+      <guid>https://s-peischl.github.io/ABS1/2020/10/16/distance-to-first-crossover-event/</guid>
       <description>We want to calcualte the distribution of the distance to the first crossover event on a long chromosome. We call this distance \(X\).
 Let \(Y\) be the number of recombination events over a length of \(d\) centimorgan. This number is Poisson distirbuted with parameter \(\lambda = d\). The probability that no crossover occured in this stretch of DNA is then
 \[ P(Y = 0) = e^{-d}. \]

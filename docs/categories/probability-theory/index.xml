@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Probability Theory on Applied Biostatistics I</title>
-    <link>/ABS1/categories/probability-theory/</link>
+    <link>https://s-peischl.github.io/ABS1/categories/probability-theory/</link>
     <description>Recent content in Probability Theory on Applied Biostatistics I</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/categories/probability-theory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://s-peischl.github.io/ABS1/categories/probability-theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Distance to first crossover event</title>
-      <link>/ABS1/2020/10/16/distance-to-first-crossover-event/</link>
+      <link>https://s-peischl.github.io/ABS1/2020/10/16/distance-to-first-crossover-event/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/2020/10/16/distance-to-first-crossover-event/</guid>
+      <guid>https://s-peischl.github.io/ABS1/2020/10/16/distance-to-first-crossover-event/</guid>
       <description>We want to calcualte the distribution of the distance to the first crossover event on a long chromosome. We call this distance \(X\).
 Let \(Y\) be the number of recombination events over a length of \(d\) centimorgan. This number is Poisson distirbuted with parameter \(\lambda = d\). The probability that no crossover occured in this stretch of DNA is then
 \[ P(Y = 0) = e^{-d}. \]
@@ -21,19 +21,19 @@ Note that if \(Y = 0\), this means that the distance to the first recombination 
     
     <item>
       <title>Binomial Distribution</title>
-      <link>/ABS1/2020/10/05/binomial-distribution/</link>
+      <link>https://s-peischl.github.io/ABS1/2020/10/05/binomial-distribution/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/2020/10/05/binomial-distribution/</guid>
+      <guid>https://s-peischl.github.io/ABS1/2020/10/05/binomial-distribution/</guid>
       <description>We introduce the binomial distribution with a simple example: imagine you have a coin with two sides: Heads and Tails. We don&#39;t know if the coin is fair, but we can try to do an experiment to see if it s fair. We flip it many times and if it is a fair coin, we should see the same number of Heads and Tails. Let&#39;s say we have flipped it 10 times and got the following sequence: s = {H,T,T,T,H,H,T,H,T,T}.</description>
     </item>
     
     <item>
       <title>The Monty Hall Problem</title>
-      <link>/ABS1/2020/10/05/the-monty-hall-problem/</link>
+      <link>https://s-peischl.github.io/ABS1/2020/10/05/the-monty-hall-problem/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/ABS1/2020/10/05/the-monty-hall-problem/</guid>
+      <guid>https://s-peischl.github.io/ABS1/2020/10/05/the-monty-hall-problem/</guid>
       <description>I discuss a solution to the Monty Hall Problem discussed in the lecture. There are many ways to think of this problem and a thorugh discussion can be found here: https://en.wikipedia.org/wiki/Monty_Hall_problem.
 Game Rules:
 Pick a door. One door has a prize behind it, say a car, the other two contain just &amp;quot;goats&amp;quot;. (Some people might prefer a goat over a car, me included. I just stick with the original formulation here, so let&#39;s just say the goat is a symbol for not getting anything and the car a symbol for a prize we actually like to have).</description>

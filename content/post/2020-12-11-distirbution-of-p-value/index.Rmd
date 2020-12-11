@@ -1,0 +1,28 @@
+---
+title: Distribution of P-value under null hypothesis
+author: SP
+date: '2020-12-11'
+slug: distirbution-of-p-value
+categories: []
+tags: []
+---
+
+We prove that the P-value is uniform distributed under the null hypothesis.
+
+Assume that our test statistic $T$ follows an arbitrary distribution with cummulative distribution function $F$ under the null hypothesis. For any value $t$  of our test statistic, the p-value is computed by calculating the probability of seeing the value $t$ or something more extreme under the null hypothesis. The P-value for an observation $t$ be defined as $p = F(t) = Prob(T \leq t)$. 
+
+Remark 1: We assumed a one-sided test here, for a two-sided test the argument is essentially the same.  
+
+Remark 2: Note that the P-value is a random variable because our test-statistic $T$ is also a random variable. For example in the t-test our test statistic is a transformation of the sample mean $\bar{X}$: 
+
+  $$T=(\bar{X}-\mu)/(\sigma/\sqrt{n})$$ 
+
+
+So we can define the ranomd vairbale that gives us the P-value as $P=F(T)$. 
+
+It follows that 
+$$Prob[P \leq p] = Prob[F(T)\leq p] = $$
+$$Prob[F^{-1} F(T) \leq F^{-1}(p)] = Prob[T \leq F^{-1} (p) ] = $$
+$$F[F^{-1}(p)]= p,$$
+
+where $F^{-1}$ is the inverse of the CDF (cf. quantiles!). In other words, the CDF of the P value is $F(p) = p$, which is the CDF of a uniform distribution, more precisly it is the CDF of Uniform(0,1).
