@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Applied Biostatistics I</title>
-    <link>https://s-peischl.github.io/ABS1/categories/</link>
+    <link>/ABS1/categories/</link>
     <description>Recent content in Categories on Applied Biostatistics I</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://s-peischl.github.io/ABS1/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Likelihood</title>
-      <link>https://s-peischl.github.io/ABS1/categories/likelihood/</link>
+      <link>/ABS1/categories/likelihood/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/categories/likelihood/</guid>
+      <guid>/ABS1/categories/likelihood/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>https://s-peischl.github.io/ABS1/categories/statistics/</link>
+      <link>/ABS1/categories/statistics/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/categories/statistics/</guid>
+      <guid>/ABS1/categories/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability Theory</title>
-      <link>https://s-peischl.github.io/ABS1/categories/probability-theory/</link>
+      <link>/ABS1/categories/probability-theory/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/categories/probability-theory/</guid>
+      <guid>/ABS1/categories/probability-theory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exercises</title>
-      <link>https://s-peischl.github.io/ABS1/categories/exercises/</link>
+      <link>/ABS1/categories/exercises/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/categories/exercises/</guid>
+      <guid>/ABS1/categories/exercises/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Introduction</title>
-      <link>https://s-peischl.github.io/ABS1/categories/introduction/</link>
+      <link>/ABS1/categories/introduction/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/categories/introduction/</guid>
+      <guid>/ABS1/categories/introduction/</guid>
       <description></description>
     </item>
     

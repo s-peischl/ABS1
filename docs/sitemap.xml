@@ -3,147 +3,152 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/</loc>
+    <loc>/ABS1/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/2020/12/11/distirbution-of-p-value/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/post/</loc>
+    <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/ABS1/categories/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/categories/</loc>
+    <loc>/ABS1/2020/11/06/deriving-a-likelihood/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/2020/11/06/deriving-a-likelihood/</loc>
+    <loc>/ABS1/tags/inference/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/inference/</loc>
+    <loc>/ABS1/tags/likelihood/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/likelihood/</loc>
+    <loc>/ABS1/categories/likelihood/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/categories/likelihood/</loc>
+    <loc>/ABS1/tags/poisson/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/poisson/</loc>
+    <loc>/ABS1/categories/statistics/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/post/</loc>
+    <loc>/ABS1/tags/</loc>
     <lastmod>2020-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/categories/statistics/</loc>
-    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/</loc>
-    <lastmod>2020-11-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://s-peischl.github.io/ABS1/2020/10/16/distance-to-first-crossover-event/</loc>
+    <loc>/ABS1/2020/10/16/distance-to-first-crossover-event/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/exponential/</loc>
+    <loc>/ABS1/tags/exponential/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/haldane/</loc>
+    <loc>/ABS1/tags/haldane/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/probability-theory/</loc>
+    <loc>/ABS1/tags/probability-theory/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/categories/probability-theory/</loc>
+    <loc>/ABS1/categories/probability-theory/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/recombination/</loc>
+    <loc>/ABS1/tags/recombination/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/2020/10/05/binomial-distribution/</loc>
+    <loc>/ABS1/2020/10/05/binomial-distribution/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/distributions/</loc>
+    <loc>/ABS1/tags/distributions/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/paradox/</loc>
+    <loc>/ABS1/tags/paradox/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/simulation/</loc>
+    <loc>/ABS1/tags/simulation/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/2020/10/05/the-monty-hall-problem/</loc>
+    <loc>/ABS1/2020/10/05/the-monty-hall-problem/</loc>
     <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</loc>
+    <loc>/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/categories/exercises/</loc>
+    <loc>/ABS1/categories/exercises/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/2020/08/31/the-exercise-sessions/</loc>
+    <loc>/ABS1/2020/08/31/the-exercise-sessions/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/tags/general-information/</loc>
+    <loc>/ABS1/tags/general-information/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/categories/introduction/</loc>
+    <loc>/ABS1/categories/introduction/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/2020/08/31/welcome/</loc>
+    <loc>/ABS1/2020/08/31/welcome/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/about/</loc>
+    <loc>/ABS1/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://s-peischl.github.io/ABS1/contact/</loc>
+    <loc>/ABS1/contact/</loc>
   </url>
   
 </urlset>

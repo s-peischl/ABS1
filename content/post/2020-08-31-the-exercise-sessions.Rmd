@@ -1,7 +1,7 @@
 ---
 title: Exercises
 author: SP
-date: '2020-08-31'
+date: '2021-08-31'
 slug: the-exercise-sessions
 categories:
   - Exercises
@@ -15,4 +15,4 @@ You will get an exercise series with a list of (mostly) applied problems. The te
 
 
 The exercise list, exercise schedule and other information can be found on ilias: 
-https://ilias.unibe.ch/goto_ilias3_unibe_crs_1793180.html
+https://ilias.unibe.ch/goto_ilias3_unibe_crs_2155333.html

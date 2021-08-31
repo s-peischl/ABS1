@@ -88,8 +88,7 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   theme_classic() +
   xlab("P[D]") + 
   ylab("P[D|T]") + 
-  theme(text = element_text(size = 25))   + 
-  theme_xkcd() 
+  theme(text = element_text(size = 25))   
 
 
 ```
@@ -100,11 +99,14 @@ We see that the test's false positive probability strongly depends on the preval
 ```{r,out.width = "80%",fig.align="center"}
 
 pD = seq(0,1,by=0.001)
-pTgivenD = 0.95
-pTgiven_notD = 0.01
+pD =0.18
+pTgivenD = 0.87
+pTgiven_notD = 1 - 0.97
 
 # law of total probability:
 pT =  pTgivenD * pD + pTgiven_notD*(1-pD)
+
+pT
 
 #Bayes Theorem:
 pDgivenT = pTgivenD*pD/pT
@@ -116,8 +118,7 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   theme_classic()+
   xlab("P[D]") + 
   ylab("P[D|T]") + 
-  theme(text = element_text(size = 20))  + 
-  theme_xkcd() 
+  theme(text = element_text(size = 20))  
 
 
 ```

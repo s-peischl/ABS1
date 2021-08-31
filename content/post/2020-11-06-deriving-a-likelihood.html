@@ -12,8 +12,6 @@ tags:
   - Inference
 ---
 
-<link href="/ABS1/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="/ABS1/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <p>In this post we are going to explore the likelihood, the log-likelihood and how to derive a maximum likelihood estimator for the parameters of a Poisson distribution.</p>
@@ -23,7 +21,8 @@ sample.size = 100
 lambda = 2
 x = rpois(sample.size,lambda)</code></pre>
 <p>This is a sample from a Poisson distribution, with mean <span class="math inline">\(\lambda =2\)</span>. We sinterpret it as i.i.d. realizations of a random variable <span class="math inline">\(X\)</span> and label the data points: <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span>, where n is the sample size.</p>
-<p>For a given pqrameter <span class="math inline">\(\lambda\)</span>, the probabiltiy to observe the value <span class="math inline">\(x \in \{ 0,1,2,3, ... \}\)</span> is given by: <span class="math inline">\(e^{-\lambda} \frac{\lambda^{x}}{x!}\)</span>. The likelihood of the sample is the the joint probability mass function of the whole sample as a function of the parameter <span class="math inline">\(\lambda\)</span>. Becassue the data points are independent, the likelihood is then simply the product of the individual probabilties for each <span class="math inline">\(x_i\)</span>: <span class="math display">\[\displaystyle L(\lambda) = \prod_{i=1}^n e^{-\lambda} \frac{\lambda^{x_i}}{x_i!}.\]</span></p>
+<p>For a given pqrameter <span class="math inline">\(\lambda\)</span>, the probabiltiy to observe the value <span class="math inline">\(x \in \{ 0,1,2,3, ... \}\)</span> is given by: <span class="math inline">\(e^{-\lambda} \frac{\lambda^{x}}{x!}\)</span>. The likelihood of the sample is the the joint probability mass function of the whole sample as a function of the parameter <span class="math inline">\(\lambda\)</span>. Becassue the data points are independent, the likelihood is then simply the product of the individual probabilties for each <span class="math inline">\(x_i\)</span>:
+<span class="math display">\[\displaystyle L(\lambda) = \prod_{i=1}^n e^{-\lambda} \frac{\lambda^{x_i}}{x_i!}.\]</span></p>
 <p>We can plot this for our example:</p>
 <pre class="r"><code>lambda.vec = seq(1,3,by = 0.01)
 L = 1
@@ -39,36 +38,42 @@ dat = data.frame(lambda = lambda.vec,Likelihood = L)
 ggplot(data = dat,aes(x = lambda,y= Likelihood)) +
   geom_line() + 
   theme(text = element_text(size = 20)) + 
-  theme_xkcd() </code></pre>
+  theme_classic() </code></pre>
 <p><img src="/ABS1/post/2020-11-06-deriving-a-likelihood_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>Next we plot the log-likelihood of the sample: <span class="math display">\[\displaystyle \ell(\lambda) = \sum_{i=1}^n \left[ x_i \log(\lambda) - \lambda - \log(x_i!) \right]\]</span></p>
+<p>Next we plot the log-likelihood of the sample:
+<span class="math display">\[\displaystyle \ell(\lambda) = \sum_{i=1}^n \left[ x_i \log(\lambda) - \lambda - \log(x_i!) \right]\]</span></p>
 <pre class="r"><code>ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
   geom_line() + 
   theme(text = element_text(size = 20)) + 
-  theme_xkcd() </code></pre>
+  theme_classic() </code></pre>
 <p><img src="/ABS1/post/2020-11-06-deriving-a-likelihood_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>Note that the log likelihood and the likelihood are maximized for the same value of <span class="math inline">\(\lambda\)</span>!</p>
 <p>Finally we are going to derive the maximum likelihood estimator. It is much simpler to do this for the log-likelihood. First we take the derivateive with respect to <span class="math inline">\(\lambda:\)</span></p>
 <p><span class="math display">\[\frac{d} {d\lambda}\displaystyle \ell(\lambda) = \sum_{i=1}^n \left[ x_i /\lambda - 1 \right]\]</span></p>
-<p>To find the maximum of <span class="math inline">\(l(\lambda)\)</span> we set the derivative to 0 and solve for <span class="math inline">\(\lambda\)</span>: <span class="math display">\[\sum_{i=1}^n \left[ x_i /\lambda - 1 \right] = 0\]</span></p>
-<p>First we take the 1 out off the sum and because <span class="math inline">\(\sum_{i=1}^n 1 = n\)</span> we get: <span class="math display">\[  \sum_{i=1}^n \left[ x_i /\lambda \right] - n = 0\]</span></p>
-<p>Next, we can also take the <span class="math inline">\(\lambda\)</span> out of the sum on the left-hand side: <span class="math display">\[ \frac{1} {\lambda}  \sum_{i=1}^n  x_i  = n \]</span> Finally we divide both sides by <span class="math inline">\(n\)</span> and multiply by both sides by <span class="math inline">\(\lambda\)</span>: <span class="math display">\[  \frac{\sum_{i=1}^n x_i } {n} = {\lambda}\]</span></p>
+<p>To find the maximum of <span class="math inline">\(l(\lambda)\)</span> we set the derivative to 0 and solve for <span class="math inline">\(\lambda\)</span>:
+<span class="math display">\[\sum_{i=1}^n \left[ x_i /\lambda - 1 \right] = 0\]</span></p>
+<p>First we take the 1 out off the sum and because <span class="math inline">\(\sum_{i=1}^n 1 = n\)</span> we get:
+<span class="math display">\[  \sum_{i=1}^n \left[ x_i /\lambda \right] - n = 0\]</span></p>
+<p>Next, we can also take the <span class="math inline">\(\lambda\)</span> out of the sum on the left-hand side:
+<span class="math display">\[ \frac{1} {\lambda}  \sum_{i=1}^n  x_i  = n \]</span>
+Finally we divide both sides by <span class="math inline">\(n\)</span> and multiply by both sides by <span class="math inline">\(\lambda\)</span>:
+<span class="math display">\[  \frac{\sum_{i=1}^n x_i } {n} = {\lambda}\]</span></p>
 <p>And this gives us our maximum likelihood estimator (MLE) <span class="math inline">\(\hat{\lambda}\)</span>:</p>
 <p><span class="math display">\[\displaystyle \hat{\lambda} = \frac{1}{n} (x_1 + x_2 + \ldots x_n) = \frac{1}{n} \sum_{i=1}^n x_i = \overline{x}\]</span></p>
-<p>If we calcualte this for our sample, we see that it indeed maximizes our likelihood:</p>
+<p>If we calculate this for our sample, we see that it indeed maximizes our likelihood:</p>
 <pre class="r"><code>lambda.hat = mean(x)
 
 
 ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
   geom_line() + 
-  theme(text = element_text(size = 20)) + 
-  theme_xkcd() +
+  theme(text = element_text(size = 20)) +
   geom_vline(xintercept = lambda.hat) +
   annotate(&quot;text&quot;, x=2.5, y = -170,label = &quot;MLE&quot;, family=&quot;xkcd&quot;,size=5) +
   geom_vline(xintercept = 2,col=&quot;blue&quot;) +
-  annotate(&quot;text&quot;, x=1.5, y = -170,label = &quot;the real value&quot;, family=&quot;xkcd&quot;,size=5,col=&quot;blue&quot;)</code></pre>
+  annotate(&quot;text&quot;, x=1.5, y = -170,label = &quot;the real value&quot;, family=&quot;xkcd&quot;,size=5,col=&quot;blue&quot;)+
+  theme_classic()</code></pre>
 <p><img src="/ABS1/post/2020-11-06-deriving-a-likelihood_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>We can also clacualte a confidence interval for our estiamte. In fact, we should allways do this! First we do the approxiamte one with the 2 SE rule:</p>
+<p>We can also calculate a confidence interval for our estimate. In fact, we should always do this! First we do the approximate one with the 2 SE rule:</p>
 <pre class="r"><code>sd.data = sd(x)
 SE = sd.data/(sqrt(sample.size))
 CI.lower = lambda.hat - 2*SE
@@ -88,7 +93,7 @@ print(c(CI.lower,CI.upper))</code></pre>
 ## sample estimates:
 ## mean of x 
 ##       2.1</code></pre>
-<p>We find almost the same confidence intervals in both cases. The calculation in the t.test function uses the percentiles of the t-distribution. We can also do this &quot;by hand&quot;:</p>
+<p>We find almost the same confidence intervals in both cases. The calculation in the t.test function uses the percentiles of the t-distribution. We can also do this “by hand”:</p>
 <pre class="r"><code>sd.data = sd(x)
 SE = sd.data/(sqrt(sample.size))
 

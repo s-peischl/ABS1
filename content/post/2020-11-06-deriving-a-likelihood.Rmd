@@ -50,7 +50,7 @@ dat = data.frame(lambda = lambda.vec,Likelihood = L)
 ggplot(data = dat,aes(x = lambda,y= Likelihood)) +
   geom_line() + 
   theme(text = element_text(size = 20)) + 
-  theme_xkcd() 
+  theme_classic() 
 
 ```
 
@@ -61,7 +61,7 @@ $$\displaystyle \ell(\lambda) = \sum_{i=1}^n \left[ x_i \log(\lambda) - \lambda 
 ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
   geom_line() + 
   theme(text = element_text(size = 20)) + 
-  theme_xkcd() 
+  theme_classic() 
 ```
 
 Note that the log likelihood and the likelihood are maximized for the same value of $\lambda$!
@@ -86,7 +86,7 @@ And this gives us our maximum likelihood estimator (MLE) $\hat{\lambda}$:
 
 $$\displaystyle \hat{\lambda} = \frac{1}{n} (x_1 + x_2 + \ldots x_n) = \frac{1}{n} \sum_{i=1}^n x_i = \overline{x}$$
 
-If we calcualte this for our sample, we see that it indeed maximizes our likelihood:
+If we calculate this for our sample, we see that it indeed maximizes our likelihood:
 
 
 ```{r}
@@ -95,16 +95,16 @@ lambda.hat = mean(x)
 
 ggplot(data = dat,aes(x = lambda,y= log(Likelihood))) +
   geom_line() + 
-  theme(text = element_text(size = 20)) + 
-  theme_xkcd() +
+  theme(text = element_text(size = 20)) +
   geom_vline(xintercept = lambda.hat) +
   annotate("text", x=2.5, y = -170,label = "MLE", family="xkcd",size=5) +
   geom_vline(xintercept = 2,col="blue") +
-  annotate("text", x=1.5, y = -170,label = "the real value", family="xkcd",size=5,col="blue")
+  annotate("text", x=1.5, y = -170,label = "the real value", family="xkcd",size=5,col="blue")+
+  theme_classic()
 
 ```
 
-We can also clacualte a confidence interval for our estiamte. In fact, we should allways do this! First we do the approxiamte one with the 2 SE rule:
+We can also calculate a confidence interval for our estimate. In fact, we should always do this! First we do the approximate one with the 2 SE rule:
 
 ```{r}
 sd.data = sd(x)

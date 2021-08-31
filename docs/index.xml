@@ -2,17 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Applied Biostatistics I</title>
-    <link>https://s-peischl.github.io/ABS1/</link>
+    <link>/ABS1/</link>
     <description>Recent content on Applied Biostatistics I</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://s-peischl.github.io/ABS1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/ABS1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Distribution of P-value under null hypothesis</title>
+      <link>/ABS1/2020/12/11/distirbution-of-p-value/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/ABS1/2020/12/11/distirbution-of-p-value/</guid>
+      <description>We prove that the P-value is uniform distributed under the null hypothesis.
+Assume that our test statistic \(T\) follows an arbitrary distribution with cummulative distribution function \(F\) under the null hypothesis. For any value \(t\) of our test statistic, the p-value is computed by calculating the probability of seeing the value \(t\) or something more extreme under the null hypothesis. The P-value for an observation \(t\) be defined as \(p = F(t) = Prob(T \leq t)\).</description>
+    </item>
+    
     <item>
       <title>Deriving a Likelihood</title>
-      <link>https://s-peischl.github.io/ABS1/2020/11/06/deriving-a-likelihood/</link>
+      <link>/ABS1/2020/11/06/deriving-a-likelihood/</link>
       <pubDate>Fri, 06 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/2020/11/06/deriving-a-likelihood/</guid>
+      <guid>/ABS1/2020/11/06/deriving-a-likelihood/</guid>
       <description>In this post we are going to explore the likelihood, the log-likelihood and how to derive a maximum likelihood estimator for the parameters of a Poisson distribution.
 We start by genearting a random data set:
 set.seed(42) sample.size = 100 lambda = 2 x = rpois(sample.size,lambda) This is a sample from a Poisson distribution, with mean \(\lambda =2\). We sinterpret it as i.i.d. realizations of a random variable \(X\) and label the data points: \(x_1, x_2, \ldots, x_n\), where n is the sample size.</description>
@@ -20,10 +30,10 @@ set.seed(42) sample.size = 100 lambda = 2 x = rpois(sample.size,lambda) This is 
     
     <item>
       <title>Distance to first crossover event</title>
-      <link>https://s-peischl.github.io/ABS1/2020/10/16/distance-to-first-crossover-event/</link>
+      <link>/ABS1/2020/10/16/distance-to-first-crossover-event/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/2020/10/16/distance-to-first-crossover-event/</guid>
+      <guid>/ABS1/2020/10/16/distance-to-first-crossover-event/</guid>
       <description>We want to calcualte the distribution of the distance to the first crossover event on a long chromosome. We call this distance \(X\).
 Let \(Y\) be the number of recombination events over a length of \(d\) centimorgan. This number is Poisson distirbuted with parameter \(\lambda = d\). The probability that no crossover occured in this stretch of DNA is then
 \[ P(Y = 0) = e^{-d}. \]
@@ -32,19 +42,19 @@ Note that if \(Y = 0\), this means that the distance to the first recombination 
     
     <item>
       <title>Binomial Distribution</title>
-      <link>https://s-peischl.github.io/ABS1/2020/10/05/binomial-distribution/</link>
+      <link>/ABS1/2020/10/05/binomial-distribution/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/2020/10/05/binomial-distribution/</guid>
+      <guid>/ABS1/2020/10/05/binomial-distribution/</guid>
       <description>We introduce the binomial distribution with a simple example: imagine you have a coin with two sides: Heads and Tails. We don&#39;t know if the coin is fair, but we can try to do an experiment to see if it s fair. We flip it many times and if it is a fair coin, we should see the same number of Heads and Tails. Let&#39;s say we have flipped it 10 times and got the following sequence: s = {H,T,T,T,H,H,T,H,T,T}.</description>
     </item>
     
     <item>
       <title>The Monty Hall Problem</title>
-      <link>https://s-peischl.github.io/ABS1/2020/10/05/the-monty-hall-problem/</link>
+      <link>/ABS1/2020/10/05/the-monty-hall-problem/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/2020/10/05/the-monty-hall-problem/</guid>
+      <guid>/ABS1/2020/10/05/the-monty-hall-problem/</guid>
       <description>I discuss a solution to the Monty Hall Problem discussed in the lecture. There are many ways to think of this problem and a thorugh discussion can be found here: https://en.wikipedia.org/wiki/Monty_Hall_problem.
 Game Rules:
 Pick a door. One door has a prize behind it, say a car, the other two contain just &amp;quot;goats&amp;quot;. (Some people might prefer a goat over a car, me included. I just stick with the original formulation here, so let&#39;s just say the goat is a symbol for not getting anything and the car a symbol for a prize we actually like to have).</description>
@@ -52,10 +62,10 @@ Pick a door. One door has a prize behind it, say a car, the other two contain ju
     
     <item>
       <title>Bayes Theorem and Conditional Probability</title>
-      <link>https://s-peischl.github.io/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</link>
+      <link>/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</guid>
+      <guid>/ABS1/2020/10/01/bayes-theorem-and-conditional-probability/</guid>
       <description>Consider a medical test for a rare disease. The test is quite accurate: it detects the disease with 95% probability (sensitivity of the test), and indicates the absence of the disease with 90% probability ( specificity of the test).
 Notation:
  event D: person has the disease; event T: test is positive (i.e., indicates disease)  We assume that the disease has incidence of 1 %: P[D] = 0.01.</description>
@@ -63,29 +73,29 @@ Notation:
     
     <item>
       <title>Exercises</title>
-      <link>https://s-peischl.github.io/ABS1/2020/08/31/the-exercise-sessions/</link>
+      <link>/ABS1/2020/08/31/the-exercise-sessions/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/2020/08/31/the-exercise-sessions/</guid>
+      <guid>/ABS1/2020/08/31/the-exercise-sessions/</guid>
       <description>The exercises will be held on Thursday morning for the Bioinformatics Master Students and Friday morning for the Ecology and Evolution master students. In principle, students can choose freely which session they want to addend, but this needs to be decided in the first week of the semester!
 You will get an exercise series with a list of (mostly) applied problems. The teaching assistants will schedule presentations of the exercises in the first exercise session.</description>
     </item>
     
     <item>
       <title>Welcome</title>
-      <link>https://s-peischl.github.io/ABS1/2020/08/31/welcome/</link>
+      <link>/ABS1/2020/08/31/welcome/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/2020/08/31/welcome/</guid>
+      <guid>/ABS1/2020/08/31/welcome/</guid>
       <description>Welcome to the webpage for the course Applied Biostatistics 1. Due to current developments we are offering this course as online only. The reason for this decision is simply that this will allow us to offer high quality lectures for everyone in a unified system. A mixture of live lectures and online podcasts would be complicated to organize (we would need to limit and track the students who attend the lectures, record the lectures and exercises sessions, eventually switch the whole system in case there is a confirmed Covid19 case in our lecture, etc.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://s-peischl.github.io/ABS1/about/</link>
+      <link>/ABS1/about/</link>
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/about/</guid>
+      <guid>/ABS1/about/</guid>
       <description>This is the webpage for the course Applied Biostatistics I.
 Zoom links, course material, exercise lists and other useful material can be found on ilias.
 Important: everybody must sign up on ilias for this course.</description>
@@ -93,10 +103,10 @@ Important: everybody must sign up on ilias for this course.</description>
     
     <item>
       <title>Contact</title>
-      <link>https://s-peischl.github.io/ABS1/contact/</link>
+      <link>/ABS1/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://s-peischl.github.io/ABS1/contact/</guid>
+      <guid>/ABS1/contact/</guid>
       <description>Lecturer:
 Stephan Peischl stephan.peischl@bioinformatics.unibe.ch
 TAs:

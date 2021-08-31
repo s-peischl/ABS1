@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.75.1" />
+
+
+<title>Distribution of P-value under null hypothesis - Applied Biostatistics I</title>
+<meta property="og:title" content="Distribution of P-value under null hypothesis - Applied Biostatistics I">
+
+
+  <link href='/ABS1/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/ABS1/css/fonts.css" media="all">
+<link rel="stylesheet" href="/ABS1/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/ABS1/" class="nav-logo">
+    <img src="/ABS1/images/logo1.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+<p style="font-size:30px"> Applied Biostatistics I HS 2020
+  <ul class="nav-links">
+    
+    <li><a href="/ABS1/about/">About</a></li>
+    
+    <li><a href="/ABS1/contact/">Contact</a></li>
+    
+    <li><a href="https://ilias.unibe.ch/goto_ilias3_unibe_crs_1793180.html">Ilias</a></li>
+    
+    <li><a href="https://twitter.com/StephanPeischl">Twitter</a></li>
+    
+  </ul>
+  
+
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">Distribution of P-value under null hypothesis</h1>
+
+    
+    <span class="article-date">2020-12-11</span>
+    
+
+    <div class="article-content">
+      
+<link href="/ABS1/2020/12/11/distirbution-of-p-value/index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/ABS1/2020/12/11/distirbution-of-p-value/index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<p>We prove that the P-value is uniform distributed under the null hypothesis.</p>
+<p>Assume that our test statistic <span class="math inline">\(T\)</span> follows an arbitrary distribution with cummulative distribution function <span class="math inline">\(F\)</span> under the null hypothesis. For any value <span class="math inline">\(t\)</span> of our test statistic, the p-value is computed by calculating the probability of seeing the value <span class="math inline">\(t\)</span> or something more extreme under the null hypothesis. The P-value for an observation <span class="math inline">\(t\)</span> be defined as <span class="math inline">\(p = F(t) = Prob(T \leq t)\)</span>.</p>
+<p>Remark 1: We assumed a one-sided test here, for a two-sided test the argument is essentially the same.</p>
+<p>Remark 2: Note that the P-value is a random variable because our test-statistic <span class="math inline">\(T\)</span> is also a random variable. For example in the t-test our test statistic is a transformation of the sample mean <span class="math inline">\(\bar{X}\)</span>:</p>
+<p><span class="math display">\[T=(\bar{X}-\mu)/(\sigma/\sqrt{n})\]</span></p>
+<p>So we can define the ranomd vairbale that gives us the P-value as <span class="math inline">\(P=F(T)\)</span>.</p>
+<p>It follows that <span class="math display">\[Prob[P \leq p] = Prob[F(T)\leq p] = \]</span> <span class="math display">\[Prob[F^{-1} F(T) \leq F^{-1}(p)] = Prob[T \leq F^{-1} (p) ] = \]</span> <span class="math display">\[F[F^{-1}(p)]= p,\]</span></p>
+<p>where <span class="math inline">\(F^{-1}\)</span> is the inverse of the CDF (cf. quantiles!). In other words, the CDF of the P value is <span class="math inline">\(F(p) = p\)</span>, which is the CDF of a uniform distribution, more precisly it is the CDF of Uniform(0,1).</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/ABS1/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/ABS1/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/ABS1/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+
