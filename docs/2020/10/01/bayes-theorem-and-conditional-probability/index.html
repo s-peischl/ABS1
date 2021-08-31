@@ -142,13 +142,16 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
 <p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-1-1.png" width="80%" style="display: block; margin: auto;" /></p>
 <p>We see that the test’s false positive probability strongly depends on the prevalence. The rarer the disease is, the less reliable the test is in informing you whether you actually have the disease. The specificity also has a strong impact on the interpretation of the test. For instance, for the current Covid-19 PCR tests specificity seems to be closer to 99% than to 90%, then we would get the following:</p>
 <pre class="r"><code>pD = seq(0,1,by=0.001)
-pTgivenD = 0.95
-pTgiven_notD = 0.01
+pD =0.18
+pTgivenD = 0.87
+pTgiven_notD = 1 - 0.97
 
 # law of total probability:
 pT =  pTgivenD * pD + pTgiven_notD*(1-pD)
 
-#Bayes Theorem:
+pT</code></pre>
+<pre><code>## [1] 0.1812</code></pre>
+<pre class="r"><code>#Bayes Theorem:
 pDgivenT = pTgivenD*pD/pT
 
 dat = data.frame(pT = pD,pDgivenT = pDgivenT)
@@ -159,6 +162,8 @@ ggplot(dat,aes(x  = pD,y = pDgivenT)) +
   xlab(&quot;P[D]&quot;) + 
   ylab(&quot;P[D|T]&quot;) + 
   theme(text = element_text(size = 20))  </code></pre>
+<pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
+## the group aesthetic?</code></pre>
 <p><img src="/ABS1/post/2020-10-01-bayes-theorem-and-conditional-probability_files/figure-html/unnamed-chunk-2-1.png" width="80%" style="display: block; margin: auto;" /></p>
 
     </div>
